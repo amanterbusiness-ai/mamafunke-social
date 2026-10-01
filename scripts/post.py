@@ -46,8 +46,21 @@ def media_url(path: str) -> str:
     return env("MEDIA_BASE_URL").rstrip("/") + "/" + path
 
 
-def graph(method: str, path: str, **params) -> dict:
-    params["access_token"] = env("META_PAGE_TOKEN")
+_page_token: str | None = None
+
+
+def page_token() -> str:
+    """Seiten-Token aus dem Systemnutzer-Token. Facebook verlangt, dass Seitenbeiträge
+    als die Seite selbst entstehen; der Systemnutzer-Token allein reicht dafür nicht."""
+    global _page_token
+    if _page_token is None:
+        data = graph("GET", env("FB_PAGE_ID"), fields="access_token")
+        _page_token = data.get("access_token") or env("META_PAGE_TOKEN")
+    return _page_token
+
+
+def graph(method: str, path: str, token: str | None = None, **params) -> dict:
+    params["access_token"] = token or env("META_PAGE_TOKEN")
     r = requests.request(method, f"{GRAPH}/{path}", data=params if method == "POST" else None,
                          params=None if method == "POST" else params, timeout=120)
     body = r.json()
@@ -98,13 +111,14 @@ def post_instagram(post: dict) -> str:
 
 def post_facebook(post: dict) -> str:
     page = env("FB_PAGE_ID")
+    token = page_token()
     if post["kind"] == "reel":
-        return graph("POST", f"{page}/videos", file_url=media_url(post["media"]["video"]),
+        return graph("POST", f"{page}/videos", token, file_url=media_url(post["media"]["video"]),
                      description=post["caption"])["id"]
-    ids = [graph("POST", f"{page}/photos", url=media_url(p), published="false")["id"]
+    ids = [graph("POST", f"{page}/photos", token, url=media_url(p), published="false")["id"]
            for p in post["media"]["instagram"]]
     params = {f"attached_media[{i}]": json.dumps({"media_fbid": x}) for i, x in enumerate(ids)}
-    return graph("POST", f"{page}/feed", message=post["caption"], **params)["id"]
+    return graph("POST", f"{page}/feed", token, message=post["caption"], **params)["id"]
 
 
 def post_youtube(post: dict) -> str:
