@@ -54,6 +54,9 @@
   // von welchem Kanal der Besuch kam (mamafunke.de/ig, /tt, /yt, /fb, /forum), damit die
   // Stores Installationen pro Kanal zählen können.
   var APP_ID_APPLE = '6817131358';
+  // Erst auf true setzen, wenn die App im App Store öffentlich ist
+  // (https://itunes.apple.com/lookup?id=6817131358&country=de liefert dann ein Ergebnis).
+  var APPLE_LIVE = false;
   var APPLE_PROVIDER = '';     // Provider-Token aus App Store Connect, Kampagnen
   var PAKET = 'de.mamafunke.app';
 
@@ -66,7 +69,7 @@
   var referrer = 'utm_source=' + k + '&utm_medium=bio&utm_campaign=social';
   var play = 'https://play.google.com/store/apps/details?id=' + PAKET +
     '&referrer=' + encodeURIComponent(referrer);
-  var apple = APP_ID_APPLE
+  var apple = APP_ID_APPLE && APPLE_LIVE
     ? 'https://apps.apple.com/de/app/id' + APP_ID_APPLE +
       (APPLE_PROVIDER ? '?pt=' + APPLE_PROVIDER + '&ct=' + k + '&mt=8' : '')
     : '';
