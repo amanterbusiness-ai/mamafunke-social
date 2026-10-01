@@ -7,7 +7,7 @@ MamaFunke gehört, und den Zugriff erlauben (Hinweis „nicht überprüfte App�
 Erweitert > Weiter zu MamaFunke Social). Danach setzt das Skript
 YT_CLIENT_ID, YT_CLIENT_SECRET und YT_REFRESH_TOKEN in beiden Repositories
 (Posten und Kennzahlen) und löscht die heruntergeladene JSON-Datei. Werte werden
-nie ausgegeben. Der Zugang darf hochladen und Statistiken lesen.
+nie ausgegeben. Der Zugang darf hochladen, Statistiken lesen und Kommentare beantworten.
 """
 
 from __future__ import annotations
@@ -24,6 +24,8 @@ SCOPES = [
     "https://www.googleapis.com/auth/youtube.upload",
     "https://www.googleapis.com/auth/youtube.readonly",
     "https://www.googleapis.com/auth/yt-analytics.readonly",
+    # Kommentare beantworten (Kommentar-Assistent in mamafunke-metrics)
+    "https://www.googleapis.com/auth/youtube.force-ssl",
 ]
 
 
