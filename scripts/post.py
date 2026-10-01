@@ -155,7 +155,16 @@ def check() -> int:
         # Nur Längen, nie Werte ausgeben.
         print(f"Meta: Zugangsdaten fehlen (Token {len(env('META_PAGE_TOKEN'))} Zeichen, Seiten-ID {len(env('FB_PAGE_ID'))} Zeichen)")
         ok = False
-    print(f"YouTube: {'eingerichtet' if READY['youtube']() else 'noch nicht eingerichtet'}")
+    if READY["youtube"]():
+        from google.auth.transport.requests import Request
+        from google.oauth2.credentials import Credentials
+
+        creds = Credentials(None, refresh_token=env("YT_REFRESH_TOKEN"), client_id=env("YT_CLIENT_ID"),
+                            client_secret=env("YT_CLIENT_SECRET"), token_uri="https://oauth2.googleapis.com/token")
+        creds.refresh(Request())  # wirft, wenn der Zugang nicht gilt
+        print("YouTube: Zugang gültig")
+    else:
+        print("YouTube: noch nicht eingerichtet")
     return 0 if ok else 1
 
 
