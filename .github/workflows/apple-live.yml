@@ -1,0 +1,26 @@
+name: iPhone-Weiterleitung
+
+on:
+  schedule:
+    - cron: "41 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/apple_live.py
+      - name: Sichern
+        run: |
+          git config user.name "mamafunke-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs
+          git diff --cached --quiet || (git commit -m "iPhone-Weiterleitung eingeschaltet" && git pull --rebase && git push)
