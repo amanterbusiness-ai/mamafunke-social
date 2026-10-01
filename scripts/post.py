@@ -34,7 +34,7 @@ BERLIN = ZoneInfo("Europe/Berlin")
 GRAPH = f"https://graph.facebook.com/{os.environ.get('GRAPH_VERSION', 'v25.0')}"
 # Verspätete Posts (z. B. nach einem Ausfall) nur bis zu diesem Abstand nachholen,
 # damit nicht Tage später ein Schwall alter Posts erscheint.
-MAX_DELAY = timedelta(hours=6)
+MAX_DELAY = timedelta(hours=10)
 CHANNELS = ("instagram", "facebook", "youtube")
 
 
