@@ -1,4 +1,6 @@
-# TikTok: Reels von Hand hochladen
+# TikTok: Reels von Hand hochladen (nur Notfall)
+
+Normalerweise plant der Claude-Task die Reels mit ein. Diese Liste ist der Ausweichweg, falls das nicht klappt.
 
 Am Handy in der TikTok-App: Video aus diesem Ordner, Beschreibung kopieren, Trend-Sound leise darunter, "KI-generierte Inhalte" an, Planen oder zur Uhrzeit posten.
 

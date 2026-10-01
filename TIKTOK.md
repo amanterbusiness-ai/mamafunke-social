@@ -19,13 +19,23 @@ https://github.com/amanterbusiness-ai/mamafunke-social
    - **Slideshow** (`kind: slide`): die Bilder aus `media.tiktok` hochladen
      (Fotomodus). Nimmt TikTok Studio keine Fotos an, stattdessen
      `media.tiktok_video` hochladen.
-   - **Reel** (`kind: reel`): **nicht hochladen.** Der Video-Upload hängt
-     beim automatisierten Browser. Reels lädt die Inhaberin am Handy selbst
-     hoch, siehe `TIKTOK_REELS.md`. Im Bericht nur auflisten.
-   - Beschreibung: `caption` wörtlich, ohne Zeilenumbrüche.
+   - **Reel** (`kind: reel`): `media.video` hochladen. **Wichtig:** Videos
+     verarbeitet TikTok nur, wenn der Tab sichtbar ist. Vorher per JavaScript
+     `document.visibilityState` prüfen. Ist es `hidden`, Reels auslassen und im
+     Bericht schreiben: "Für Reels den TikTok-Tab in Chrome nach vorne holen."
+     Unter "Mehr anzeigen" den Schalter **"KI-generierter Inhalt"** einschalten
+     (Hinweisfenster mit "Aktivieren" bestätigen).
+   - Beschreibung: Feld leeren (Strg+A, Entf), `caption` wörtlich tippen,
+     danach Escape (schließt Hashtag-Vorschläge). **Vor dem Planen prüfen**, ob
+     der Text im Feld steht; sonst nicht planen, sondern neu ansetzen.
+   - Unter "Mehr anzeigen": **"Beitragsinhalt offenlegen"** an und **"Deine
+     Marke"** anhaken (eigene App = Werbung für die eigene Marke).
    - Titelbild: die erste Slide.
    - Wer darf ansehen: **Alle**. Kommentare: an.
    - **Planen** statt Posten: Datum `date`, Uhrzeit `time` (deutsche Zeit).
+     Die Minuten der Zeitauswahl lassen sich zuverlässig per JavaScript wählen:
+     Element mit Klasse `tiktok-timepicker-right` und Text der Minute anklicken,
+     Stunde analog mit `tiktok-timepicker-left`. Danach die Werte prüfen.
 4. Zum Schluss notieren: welche Posts neu geplant wurden, welche fehlen und
    warum.
 
