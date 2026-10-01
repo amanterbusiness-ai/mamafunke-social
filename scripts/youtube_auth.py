@@ -5,8 +5,9 @@
 Öffnet den Browser. Dort mit dem Google-Konto anmelden, dem der YouTube-Kanal
 MamaFunke gehört, und den Zugriff erlauben (Hinweis „nicht überprüfte App“:
 Erweitert > Weiter zu MamaFunke Social). Danach setzt das Skript
-YT_CLIENT_ID, YT_CLIENT_SECRET und YT_REFRESH_TOKEN im Repository und löscht
-die heruntergeladene JSON-Datei. Werte werden nie ausgegeben.
+YT_CLIENT_ID, YT_CLIENT_SECRET und YT_REFRESH_TOKEN in beiden Repositories
+(Posten und Kennzahlen) und löscht die heruntergeladene JSON-Datei. Werte werden
+nie ausgegeben. Der Zugang darf hochladen und Statistiken lesen.
 """
 
 from __future__ import annotations
@@ -18,13 +19,18 @@ from pathlib import Path
 
 from google_auth_oauthlib.flow import InstalledAppFlow
 
-REPO = "amanterbusiness-ai/mamafunke-social"
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
+REPOS = ["amanterbusiness-ai/mamafunke-social", "amanterbusiness-ai/mamafunke-metrics"]
+SCOPES = [
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/youtube.readonly",
+    "https://www.googleapis.com/auth/yt-analytics.readonly",
+]
 
 
 def set_secret(name: str, value: str) -> None:
-    subprocess.run(["gh", "secret", "set", name, "-R", REPO], input=value, text=True, check=True,
-                   stdout=subprocess.DEVNULL)
+    for repo in REPOS:
+        subprocess.run(["gh", "secret", "set", name, "-R", repo], input=value, text=True, check=True,
+                       stdout=subprocess.DEVNULL)
 
 
 def main() -> int:
@@ -40,7 +46,7 @@ def main() -> int:
     set_secret("YT_CLIENT_SECRET", client["client_secret"])
     set_secret("YT_REFRESH_TOKEN", creds.refresh_token)
     path.unlink()
-    print("YouTube-Zugang hinterlegt (3 Secrets), JSON-Datei gelöscht.")
+    print(f"YouTube-Zugang hinterlegt (3 Secrets in {len(REPOS)} Repos), JSON-Datei gelöscht.")
     return 0
 
 
