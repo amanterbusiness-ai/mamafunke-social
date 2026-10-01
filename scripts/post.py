@@ -8,7 +8,7 @@ TikTok wird hier nicht gepostet (siehe TIKTOK.md).
 
 Kanäle ohne Zugangsdaten werden übersprungen, nicht als Fehler gewertet.
 Umgebungsvariablen (GitHub Secrets):
-    META_PAGE_TOKEN, FB_PAGE_ID, IG_USER_ID
+    META_PAGE_TOKEN, FB_PAGE_ID, IG_USER_ID (optional)
     YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
     MEDIA_BASE_URL  öffentlicher Pfad zum Repository-Inhalt (raw.githubusercontent.com/...)
 Aufruf lokal zum Testen: python scripts/post.py --dry-run
@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PLAN = ROOT / "plan" / "posts.json"
 STATE = ROOT / "state" / "posted.json"
 BERLIN = ZoneInfo("Europe/Berlin")
-GRAPH = f"https://graph.facebook.com/{os.environ.get('GRAPH_VERSION', 'v23.0')}"
+GRAPH = f"https://graph.facebook.com/{os.environ.get('GRAPH_VERSION', 'v25.0')}"
 # Verspätete Posts (z. B. nach einem Ausfall) nur bis zu diesem Abstand nachholen,
 # damit nicht Tage später ein Schwall alter Posts erscheint.
 MAX_DELAY = timedelta(hours=6)
@@ -68,8 +68,19 @@ def wait_ready(container: str) -> None:
     raise RuntimeError("Instagram-Verarbeitung dauert zu lange")
 
 
+def instagram_id() -> str:
+    """IG_USER_ID ist optional: ohne ihn wird das mit der Seite verknüpfte Konto genommen."""
+    if env("IG_USER_ID"):
+        return env("IG_USER_ID")
+    linked = graph("GET", env("FB_PAGE_ID"), fields="instagram_business_account").get("instagram_business_account")
+    if not linked:
+        raise RuntimeError("Kein Instagram-Konto mit der Facebook-Seite verknüpft")
+    os.environ["IG_USER_ID"] = linked["id"]
+    return linked["id"]
+
+
 def post_instagram(post: dict) -> str:
-    ig = env("IG_USER_ID")
+    ig = instagram_id()
     if post["kind"] == "reel":
         c = graph("POST", f"{ig}/media", media_type="REELS", video_url=media_url(post["media"]["video"]),
                   caption=post["caption"], share_to_feed="true")["id"]
@@ -120,7 +131,7 @@ def post_youtube(post: dict) -> str:
 
 
 READY = {
-    "instagram": lambda: env("META_PAGE_TOKEN") and env("IG_USER_ID"),
+    "instagram": lambda: env("META_PAGE_TOKEN") and (env("IG_USER_ID") or env("FB_PAGE_ID")),
     "facebook": lambda: env("META_PAGE_TOKEN") and env("FB_PAGE_ID"),
     "youtube": lambda: env("YT_REFRESH_TOKEN") and env("YT_CLIENT_ID") and env("YT_CLIENT_SECRET"),
 }
