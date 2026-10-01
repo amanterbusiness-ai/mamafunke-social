@@ -138,11 +138,35 @@ READY = {
 POSTERS = {"instagram": post_instagram, "facebook": post_facebook, "youtube": post_youtube}
 
 
+def check() -> int:
+    """Liest nur: Seite, verknüpftes Instagram-Konto, Rechte des Tokens."""
+    ok = True
+    if READY["facebook"]():
+        page = graph("GET", env("FB_PAGE_ID"), fields="name,instagram_business_account{username}")
+        print(f"Facebook-Seite: {page.get('name')}")
+        ig = page.get("instagram_business_account")
+        print(f"Instagram: {ig.get('username') if ig else 'NICHT verknüpft'}")
+        ok = ok and bool(ig)
+        perms = graph("GET", "debug_token", input_token=env("META_PAGE_TOKEN")).get("data", {})
+        print(f"Token gültig: {perms.get('is_valid')}, läuft ab: {perms.get('expires_at') or 'nie'}")
+        print(f"Rechte: {', '.join(sorted(perms.get('scopes', [])))}")
+        ok = ok and bool(perms.get("is_valid"))
+    else:
+        print("Meta: Zugangsdaten fehlen")
+        ok = False
+    print(f"YouTube: {'eingerichtet' if READY['youtube']() else 'noch nicht eingerichtet'}")
+    return 0 if ok else 1
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--now", help="Testzeit, z. B. 2026-10-01T12:31")
+    ap.add_argument("--check", action="store_true", help="nur Zugänge prüfen, nichts posten")
     args = ap.parse_args()
+
+    if args.check:
+        return check()
 
     now = datetime.fromisoformat(args.now).replace(tzinfo=BERLIN) if args.now else datetime.now(BERLIN)
     posts = json.loads(PLAN.read_text(encoding="utf-8"))

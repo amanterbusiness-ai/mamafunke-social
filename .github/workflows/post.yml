@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
+    inputs:
+      check:
+        description: "Nur Zugänge prüfen, nichts posten"
+        type: boolean
+        default: true
 
 concurrency:
   group: posten
@@ -32,7 +37,7 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           MEDIA_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/main
-        run: python scripts/post.py
+        run: python scripts/post.py ${{ inputs.check && '--check' || '' }}
       - name: Stand sichern
         if: always()
         run: |
