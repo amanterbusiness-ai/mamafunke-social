@@ -19,8 +19,9 @@ https://github.com/amanterbusiness-ai/mamafunke-social
    - **Slideshow** (`kind: slide`): die Bilder aus `media.tiktok` hochladen
      (Fotomodus). Nimmt TikTok Studio keine Fotos an, stattdessen
      `media.tiktok_video` hochladen.
-   - **Reel** (`kind: reel`): `media.video` hochladen und den Schalter
-     **„KI-generierte Inhalte“** einschalten (die Videoszenen sind KI-Bilder).
+   - **Reel** (`kind: reel`): **nicht hochladen.** Der Video-Upload hängt
+     beim automatisierten Browser. Reels lädt die Inhaberin am Handy selbst
+     hoch, siehe `TIKTOK_REELS.md`. Im Bericht nur auflisten.
    - Beschreibung: `caption` wörtlich, ohne Zeilenumbrüche.
    - Titelbild: die erste Slide.
    - Wer darf ansehen: **Alle**. Kommentare: an.
