@@ -152,7 +152,8 @@ def check() -> int:
         print(f"Rechte: {', '.join(sorted(perms.get('scopes', [])))}")
         ok = ok and bool(perms.get("is_valid"))
     else:
-        print("Meta: Zugangsdaten fehlen")
+        # Nur Längen, nie Werte ausgeben.
+        print(f"Meta: Zugangsdaten fehlen (Token {len(env('META_PAGE_TOKEN'))} Zeichen, Seiten-ID {len(env('FB_PAGE_ID'))} Zeichen)")
         ok = False
     print(f"YouTube: {'eingerichtet' if READY['youtube']() else 'noch nicht eingerichtet'}")
     return 0 if ok else 1
