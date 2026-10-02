@@ -1512,5 +1512,52 @@
     "media": {
       "video": "media/videos/v02b-akku.mp4"
     }
+  },
+  {
+    "id": "video-04-schlaf",
+    "nach_apple": 4,
+    "time": "20:15",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-erschoepfung-016",
+    "hook": "Nachts um drei. Wieder du.",
+    "hook_type": "satz",
+    "ki": true,
+    "caption": "Schlafmangel als Mama: Nachts um drei, wieder du. Brotdosen um 23:40, Kaffee um 6:05, Kita, Job, Wäsche. Und „selbst schlafen“ bleibt offen.\n\nMamaFunke gibt dir jeden Tag einen Satz, direkt auf dem Startbildschirm. Kostenlos im App Store und bei Google Play, Link im Profil oder mamafunke.de\n\nDie Alltagsszenen sind KI-generiert.\n\n#müdemama #schlafmangel #mamaalltag #mamaleben #mentalload",
+    "captions": {
+      "youtube": "Schlafmangel als Mama: Nachts um drei, wieder du. Brotdosen um 23:40, Kaffee um 6:05, Kita, Job, Wäsche. Und „selbst schlafen“ bleibt offen.\n\nMamaFunke gibt dir jeden Tag einen Satz, direkt auf dem Startbildschirm. Kostenlos im App Store und bei Google Play: mamafunke.de/yt\n\nDie Alltagsszenen sind KI-generiert."
+    },
+    "yt_titel": "Müde Mama: Nachts um drei, wieder du #shorts",
+    "media": {
+      "video": "media/videos/v04-schlaf.mp4"
+    }
+  },
+  {
+    "id": "video-05-schuld",
+    "nach_apple": 5,
+    "time": "20:15",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-schuldgefuehle-019",
+    "hook": "Dein Kopf hat 26 Vorwürfe offen.",
+    "hook_type": "satz",
+    "caption": "Schuldgefühle als Mama: Dein Kopf hat 26 Vorwürfe offen. Zu laut geworden, schon wieder Nudeln, nicht vorgelesen. Und ganz hinten: „Und was lief gut?“ Du warst da. Das zählt mehr.\n\nMamaFunke legt dir jeden Tag einen Satz auf den Startbildschirm. Kostenlos im App Store und bei Google Play, Link im Profil oder mamafunke.de\n\n#schuldgefühle #mamaalltag #mamaleben #mamasein #gutgenug",
+    "captions": {
+      "youtube": "Schuldgefühle als Mama: Dein Kopf hat 26 Vorwürfe offen. Zu laut geworden, schon wieder Nudeln, nicht vorgelesen. Und ganz hinten: „Und was lief gut?“ Du warst da. Das zählt mehr.\n\nMamaFunke legt dir jeden Tag einen Satz auf den Startbildschirm. Kostenlos im App Store und bei Google Play: mamafunke.de/yt"
+    },
+    "yt_titel": "Schuldgefühle als Mama: 26 Vorwürfe im Kopf #shorts",
+    "media": {
+      "video": "media/videos/v05-schuld.mp4"
+    }
   }
 ]
