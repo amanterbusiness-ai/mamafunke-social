@@ -30,6 +30,7 @@ import requests
 ROOT = Path(__file__).resolve().parents[1]
 PLAN = ROOT / "plan" / "posts.json"
 STATE = ROOT / "state" / "posted.json"
+APPLE = ROOT / "state" / "apple_live.json"
 BERLIN = ZoneInfo("Europe/Berlin")
 GRAPH = f"https://graph.facebook.com/{os.environ.get('GRAPH_VERSION', 'v25.0')}"
 # Verspätete Posts (z. B. nach einem Ausfall) nur bis zu diesem Abstand nachholen,
@@ -40,6 +41,29 @@ CHANNELS = ("instagram", "facebook", "youtube")
 
 def env(name: str) -> str:
     return os.environ.get(name, "").strip()
+
+
+def apple_datum() -> str | None:
+    """Tag der App-Store-Freigabe, geschrieben von scripts/apple_live.py."""
+    if not APPLE.exists():
+        return None
+    return json.loads(APPLE.read_text(encoding="utf-8")).get("datum")
+
+
+def faellig(post: dict, apple: str | None) -> datetime | None:
+    """Zeitpunkt eines Posts. Posts mit "nach_apple" warten auf die App-Store-Freigabe
+    und erscheinen so viele Tage danach; vorher sind sie nicht fällig (None)."""
+    if "nach_apple" in post:
+        if not apple:
+            return None
+        tag = datetime.fromisoformat(apple).date() + timedelta(days=int(post["nach_apple"]))
+        return datetime.fromisoformat(f"{tag.isoformat()}T{post['time']}").replace(tzinfo=BERLIN)
+    return datetime.fromisoformat(f"{post['date']}T{post['time']}").replace(tzinfo=BERLIN)
+
+
+def text(post: dict, kanal: str) -> str:
+    """Eigener Text je Kanal, sonst die gemeinsame Caption."""
+    return post.get("captions", {}).get(kanal) or post["caption"]
 
 
 def media_url(path: str) -> str:
@@ -96,7 +120,7 @@ def post_instagram(post: dict) -> str:
     ig = instagram_id()
     if post["kind"] == "reel":
         c = graph("POST", f"{ig}/media", media_type="REELS", video_url=media_url(post["media"]["video"]),
-                  caption=post["caption"], share_to_feed="true")["id"]
+                  caption=text(post, "instagram"), share_to_feed="true")["id"]
     else:
         children = []
         for path in post["media"]["instagram"]:
@@ -114,7 +138,7 @@ def post_facebook(post: dict) -> str:
     token = page_token()
     if post["kind"] == "reel":
         return graph("POST", f"{page}/videos", token, file_url=media_url(post["media"]["video"]),
-                     description=post["caption"])["id"]
+                     description=text(post, "facebook"))["id"]
     ids = [graph("POST", f"{page}/photos", token, url=media_url(p), published="false")["id"]
            for p in post["media"]["instagram"]]
     params = {f"attached_media[{i}]": json.dumps({"media_fbid": x}) for i, x in enumerate(ids)}
@@ -132,9 +156,12 @@ def post_youtube(post: dict) -> str:
                         client_secret=env("YT_CLIENT_SECRET"), token_uri="https://oauth2.googleapis.com/token")
     yt = build("youtube", "v3", credentials=creds, cache_discovery=False)
     body = {
-        "snippet": {"title": f"{post['hook']} #shorts"[:100], "description": post["caption"],
+        "snippet": {"title": (post.get("yt_titel") or f"{post['hook']} #shorts")[:100],
+                    "description": text(post, "youtube"),
                     "categoryId": "22", "defaultLanguage": "de"},
-        "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False},
+        "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False,
+                   # KI-Kennzeichnung ("Veränderte oder synthetische Inhalte")
+                   "containsSyntheticMedia": bool(post.get("ki"))},
     }
     req = yt.videos().insert(part="snippet,status", body=body,
                              media_body=MediaFileUpload(str(ROOT / post["media"]["video"]), resumable=True))
@@ -197,9 +224,10 @@ def main() -> int:
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
     failures = 0
 
+    apple = apple_datum()
     for post in posts:
-        due = datetime.fromisoformat(f"{post['date']}T{post['time']}").replace(tzinfo=BERLIN)
-        if due > now:
+        due = faellig(post, apple)
+        if due is None or due > now:
             continue
         for channel in CHANNELS:
             if channel not in post["channels"] or f"{post['id']}:{channel}" in state:

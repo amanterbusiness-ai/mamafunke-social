@@ -22,5 +22,5 @@ jobs:
         run: |
           git config user.name "mamafunke-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs
+          git add docs state
           git diff --cached --quiet || (git commit -m "iPhone-Weiterleitung eingeschaltet" && git pull --rebase && git push)

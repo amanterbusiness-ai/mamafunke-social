@@ -1441,5 +1441,76 @@
       ],
       "tiktok_video": "media/42-schick/tiktok.mp4"
     }
+  },
+  {
+    "id": "video-03-alltag",
+    "nach_apple": 1,
+    "time": "20:15",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-mental-load-010",
+    "hook": "Die Arbeit, die keiner sieht.",
+    "hook_type": "satz",
+    "ki": true,
+    "caption": "Mental Load als Mama: die Arbeit, die keiner sieht. Schuhe, Termine, Kita, Aufräumen. Und „an dich denken“ bleibt offen.\n\nMamaFunke gibt dir jeden Tag einen Satz, direkt auf dem Startbildschirm. Kostenlos im App Store und bei Google Play, Link im Profil oder mamafunke.de\n\nDie Alltagsszenen sind KI-generiert.\n\n#mentalload #mamaalltag #mamaleben #selbstfürsorge #mamasein",
+    "captions": {
+      "youtube": "Mental Load als Mama: die Arbeit, die keiner sieht. Schuhe, Termine, Kita, Aufräumen. Und „an dich denken“ bleibt offen.\n\nMamaFunke gibt dir jeden Tag einen Satz, direkt auf dem Startbildschirm. Kostenlos im App Store und bei Google Play: mamafunke.de/yt\n\nDie Alltagsszenen sind KI-generiert."
+    },
+    "yt_titel": "Mental Load als Mama: die Arbeit, die keiner sieht #shorts",
+    "media": {
+      "video": "media/videos/v03-alltag.mp4"
+    }
+  },
+  {
+    "id": "video-01b-tabs",
+    "nach_apple": 2,
+    "time": "20:15",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-mental-load-001",
+    "hook": "Dein Kopf hat 47 Tabs offen.",
+    "hook_type": "satz",
+    "caption": "Mental Load: Dein Kopf hat 47 Tabs offen. Brotdose, Kinderarzt, Turnbeutel, Elternabend. Und ganz hinten: „Und ich?“\n\nMamaFunke legt dir jeden Tag einen Satz auf den Startbildschirm. Kostenlos im App Store und bei Google Play, Link im Profil oder mamafunke.de\n\n#mentalload #mamaalltag #mamaleben #mamasein #müdemama",
+    "captions": {
+      "youtube": "Mental Load: Dein Kopf hat 47 Tabs offen. Brotdose, Kinderarzt, Turnbeutel, Elternabend. Und ganz hinten: „Und ich?“\n\nMamaFunke legt dir jeden Tag einen Satz auf den Startbildschirm. Kostenlos im App Store und bei Google Play: mamafunke.de/yt"
+    },
+    "yt_titel": "Mental Load: Dein Kopf hat 47 Tabs offen #shorts",
+    "media": {
+      "video": "media/videos/v01b-tabs.mp4"
+    }
+  },
+  {
+    "id": "video-02b-akku",
+    "nach_apple": 3,
+    "time": "20:15",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-mental-load-002",
+    "hook": "Du bist nicht faul. Du bist leer.",
+    "hook_type": "satz",
+    "ki": true,
+    "caption": "Du bist nicht faul. Du bist leer. Kinderarzt, Brotdose, Geschenk für Samstag, und um 21:47 stehst du bei 2 Prozent.\n\nMamaFunke gibt dir jeden Tag einen Satz, nur für dich, direkt auf dem Startbildschirm. Kostenlos im App Store und bei Google Play, Link im Profil oder mamafunke.de\n\nDie Stimme ist KI-generiert.\n\n#mentalload #erschöpftemama #mamaalltag #mamaleben #selbstfürsorge",
+    "captions": {
+      "youtube": "Du bist nicht faul. Du bist leer. Kinderarzt, Brotdose, Geschenk für Samstag, und um 21:47 stehst du bei 2 Prozent.\n\nMamaFunke gibt dir jeden Tag einen Satz, nur für dich, direkt auf dem Startbildschirm. Kostenlos im App Store und bei Google Play: mamafunke.de/yt\n\nDie Stimme ist KI-generiert."
+    },
+    "yt_titel": "Du bist nicht faul. Du bist leer. Mental Load als Mama #shorts",
+    "media": {
+      "video": "media/videos/v02b-akku.mp4"
+    }
   }
 ]
