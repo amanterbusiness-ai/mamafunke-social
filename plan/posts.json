@@ -1518,7 +1518,6 @@
   },
   {
     "id": "video-04-schlaf",
-    "nach_apple": 4,
     "time": "20:15",
     "kind": "reel",
     "channels": [
@@ -1531,18 +1530,19 @@
     "hook": "Nachts um drei. Wieder du.",
     "hook_type": "satz",
     "ki": true,
-    "caption": "Schlafmangel als Mama: Nachts um drei, wieder du. Brotdosen um 23:40, Kaffee um 6:05, Kita, Job, Wäsche. Und „selbst schlafen“ bleibt offen.\n\nMamaFunke gibt dir jeden Tag einen Satz, direkt auf dem Startbildschirm. Kostenlos im App Store und bei Google Play, Link im Profil oder mamafunke.de\n\nDie Alltagsszenen sind KI-generiert.\n\n#müdemama #schlafmangel #mamaalltag #mamaleben #mentalload",
+    "caption": "Schlafmangel als Mama: Nachts um drei, wieder du. Brotdosen um 23:40, Kaffee um 6:05, Kita, Job, Wäsche. Und „selbst schlafen“ bleibt offen.\n\nMamaFunke gibt dir jeden Tag einen Satz, direkt auf dem Startbildschirm. Kostenlos laden, Link im Profil oder mamafunke.de\n\nDie Alltagsszenen sind KI-generiert.\n\n#müdemama #schlafmangel #mamaalltag #mamaleben #mentalload",
     "captions": {
-      "youtube": "Schlafmangel als Mama: Nachts um drei, wieder du. Brotdosen um 23:40, Kaffee um 6:05, Kita, Job, Wäsche. Und „selbst schlafen“ bleibt offen.\n\nMamaFunke gibt dir jeden Tag einen Satz, direkt auf dem Startbildschirm. Kostenlos im App Store und bei Google Play: mamafunke.de/yt\n\nDie Alltagsszenen sind KI-generiert."
+      "youtube": "Schlafmangel als Mama: Nachts um drei, wieder du. Brotdosen um 23:40, Kaffee um 6:05, Kita, Job, Wäsche. Und „selbst schlafen“ bleibt offen.\n\nMamaFunke gibt dir jeden Tag einen Satz, direkt auf dem Startbildschirm. Kostenlos laden: mamafunke.de/yt\n\nDie Alltagsszenen sind KI-generiert."
     },
     "yt_titel": "Müde Mama: Nachts um drei, wieder du #shorts",
     "media": {
       "video": "media/videos/v04-schlaf.mp4"
-    }
+    },
+    "date": "2026-10-06",
+    "weekday": "Dienstag"
   },
   {
     "id": "video-05-schuld",
-    "nach_apple": 5,
     "time": "20:15",
     "kind": "reel",
     "channels": [
@@ -1554,14 +1554,16 @@
     "impulse": "mf-schuldgefuehle-019",
     "hook": "Dein Kopf hat 26 Vorwürfe offen.",
     "hook_type": "satz",
-    "caption": "Schuldgefühle als Mama: Dein Kopf hat 26 Vorwürfe offen. Zu laut geworden, schon wieder Nudeln, nicht vorgelesen. Und ganz hinten: „Und was lief gut?“ Du warst da. Das zählt mehr.\n\nMamaFunke legt dir jeden Tag einen Satz auf den Startbildschirm. Kostenlos im App Store und bei Google Play, Link im Profil oder mamafunke.de\n\n#schuldgefühle #mamaalltag #mamaleben #mamasein #gutgenug",
+    "caption": "Schuldgefühle als Mama: Dein Kopf hat 26 Vorwürfe offen. Zu laut geworden, schon wieder Nudeln, nicht vorgelesen. Und ganz hinten: „Und was lief gut?“ Du warst da. Das zählt mehr.\n\nMamaFunke legt dir jeden Tag einen Satz auf den Startbildschirm. Kostenlos laden, Link im Profil oder mamafunke.de\n\n#schuldgefühle #mamaalltag #mamaleben #mamasein #gutgenug",
     "captions": {
-      "youtube": "Schuldgefühle als Mama: Dein Kopf hat 26 Vorwürfe offen. Zu laut geworden, schon wieder Nudeln, nicht vorgelesen. Und ganz hinten: „Und was lief gut?“ Du warst da. Das zählt mehr.\n\nMamaFunke legt dir jeden Tag einen Satz auf den Startbildschirm. Kostenlos im App Store und bei Google Play: mamafunke.de/yt"
+      "youtube": "Schuldgefühle als Mama: Dein Kopf hat 26 Vorwürfe offen. Zu laut geworden, schon wieder Nudeln, nicht vorgelesen. Und ganz hinten: „Und was lief gut?“ Du warst da. Das zählt mehr.\n\nMamaFunke legt dir jeden Tag einen Satz auf den Startbildschirm. Kostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Schuldgefühle als Mama: 26 Vorwürfe im Kopf #shorts",
     "media": {
       "video": "media/videos/v05-schuld.mp4"
-    }
+    },
+    "date": "2026-10-07",
+    "weekday": "Mittwoch"
   },
   {
     "id": "slide-07-mental-reel",
@@ -1578,7 +1580,7 @@
     "hook": "23 Uhr im Kopf einer Mama.",
     "caption": "23 Uhr im Kopf einer Mama. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "23 Uhr im Kopf einer Mama. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "23 Uhr im Kopf einer Mama. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "23 Uhr im Kopf einer Mama. #shorts",
     "media": {
@@ -1600,7 +1602,7 @@
     "hook": "Für Mamas mit schlechtem Gewissen.",
     "caption": "Für Mamas mit schlechtem Gewissen. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Für Mamas mit schlechtem Gewissen. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für Mamas mit schlechtem Gewissen. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für Mamas mit schlechtem Gewissen. #shorts",
     "media": {
@@ -1622,7 +1624,7 @@
     "hook": "Für Partner:",
     "caption": "Für Partner: Sag heute nicht nur Danke. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #mamaliebe",
     "captions": {
-      "youtube": "Für Partner: Sag heute nicht nur Danke. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für Partner: Sag heute nicht nur Danke. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für Partner: #shorts",
     "media": {
@@ -1644,7 +1646,7 @@
     "hook": "„Ich helf dir gern“",
     "caption": "„Ich helf dir gern“ ist keine Entlastung. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "„Ich helf dir gern“ ist keine Entlastung. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "„Ich helf dir gern“ ist keine Entlastung. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "„Ich helf dir gern“ #shorts",
     "media": {
@@ -1666,7 +1668,7 @@
     "hook": "Nein sagen ist auch Fürsorge.",
     "caption": "Nein sagen ist auch Fürsorge. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Nein sagen ist auch Fürsorge. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Nein sagen ist auch Fürsorge. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Nein sagen ist auch Fürsorge. #shorts",
     "media": {
@@ -1688,7 +1690,7 @@
     "hook": "Mama-Pause, laut Realität:",
     "caption": "Mama-Pause, laut Realität: Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "Mama-Pause, laut Realität: Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Mama-Pause, laut Realität: Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Mama-Pause, laut Realität: #shorts",
     "media": {
@@ -1710,7 +1712,7 @@
     "hook": "Für die Mama, die heute nur müde ist.",
     "caption": "Für die Mama, die heute nur müde ist. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Für die Mama, die heute nur müde ist. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für die Mama, die heute nur müde ist. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für die Mama, die heute nur müde ist. #shorts",
     "media": {
@@ -1732,7 +1734,7 @@
     "hook": "Für die Freundin, die gerade nur funktioniert.",
     "caption": "Für die Freundin, die gerade nur funktioniert. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #mamaliebe",
     "captions": {
-      "youtube": "Für die Freundin, die gerade nur funktioniert. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für die Freundin, die gerade nur funktioniert. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für die Freundin, die gerade nur funktioniert. #shorts",
     "media": {
@@ -1754,7 +1756,7 @@
     "hook": "Wenn du heute laut geworden bist.",
     "caption": "Wenn du heute laut geworden bist. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "Wenn du heute laut geworden bist. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Wenn du heute laut geworden bist. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Wenn du heute laut geworden bist. #shorts",
     "media": {
@@ -1776,7 +1778,7 @@
     "hook": "Für die Babyzeit, die dir keiner erklärt hat.",
     "caption": "Für die Babyzeit, die dir keiner erklärt hat. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Für die Babyzeit, die dir keiner erklärt hat. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für die Babyzeit, die dir keiner erklärt hat. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für die Babyzeit, die dir keiner erklärt hat. #shorts",
     "media": {
@@ -1798,7 +1800,7 @@
     "hook": "Alleinerziehend heißt:",
     "caption": "Alleinerziehend heißt: nie ausfallen dürfen. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "Alleinerziehend heißt: nie ausfallen dürfen. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Alleinerziehend heißt: nie ausfallen dürfen. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Alleinerziehend heißt: #shorts",
     "media": {
@@ -1820,7 +1822,7 @@
     "hook": "Nach dem dritten Wutanfall heute.",
     "caption": "Nach dem dritten Wutanfall heute. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Nach dem dritten Wutanfall heute. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Nach dem dritten Wutanfall heute. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Nach dem dritten Wutanfall heute. #shorts",
     "media": {
@@ -1842,7 +1844,7 @@
     "hook": "Für die Mama eines Kleinkinds in deinem Leben.",
     "caption": "Für die Mama eines Kleinkinds in deinem Leben. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #mamaliebe",
     "captions": {
-      "youtube": "Für die Mama eines Kleinkinds in deinem Leben. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für die Mama eines Kleinkinds in deinem Leben. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für die Mama eines Kleinkinds in deinem Leben. #shorts",
     "media": {
@@ -1864,7 +1866,7 @@
     "hook": "Zurück im Job.",
     "caption": "Zurück im Job. Der Kopf zu Hause. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "Zurück im Job. Der Kopf zu Hause. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Zurück im Job. Der Kopf zu Hause. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Zurück im Job. #shorts",
     "media": {
@@ -1886,7 +1888,7 @@
     "hook": "Für Mamas von Schulkindern.",
     "caption": "Für Mamas von Schulkindern. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Für Mamas von Schulkindern. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für Mamas von Schulkindern. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für Mamas von Schulkindern. #shorts",
     "media": {
@@ -1908,7 +1910,7 @@
     "hook": "Babyschlaf ist keine Arbeitszeit.",
     "caption": "Babyschlaf ist keine Arbeitszeit. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "Babyschlaf ist keine Arbeitszeit. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Babyschlaf ist keine Arbeitszeit. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Babyschlaf ist keine Arbeitszeit. #shorts",
     "media": {
@@ -1930,7 +1932,7 @@
     "hook": "Für Mamas, die alles allein organisieren.",
     "caption": "Für Mamas, die alles allein organisieren. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Für Mamas, die alles allein organisieren. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für Mamas, die alles allein organisieren. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für Mamas, die alles allein organisieren. #shorts",
     "media": {
@@ -1952,7 +1954,7 @@
     "hook": "Für die Mama, die nie zurückschreibt.",
     "caption": "Für die Mama, die nie zurückschreibt. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #mamaliebe",
     "captions": {
-      "youtube": "Für die Mama, die nie zurückschreibt. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für die Mama, die nie zurückschreibt. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für die Mama, die nie zurückschreibt. #shorts",
     "media": {
@@ -1974,7 +1976,7 @@
     "hook": "Müde sein ist kein Versagen.",
     "caption": "Müde sein ist kein Versagen. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "Müde sein ist kein Versagen. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Müde sein ist kein Versagen. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Müde sein ist kein Versagen. #shorts",
     "media": {
@@ -1996,7 +1998,7 @@
     "hook": "Für alleinerziehende Mamas.",
     "caption": "Für alleinerziehende Mamas. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Für alleinerziehende Mamas. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für alleinerziehende Mamas. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für alleinerziehende Mamas. #shorts",
     "media": {
@@ -2018,7 +2020,7 @@
     "hook": "Abgegeben heißt nicht vergessen.",
     "caption": "Abgegeben heißt nicht vergessen. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "Abgegeben heißt nicht vergessen. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Abgegeben heißt nicht vergessen. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Abgegeben heißt nicht vergessen. #shorts",
     "media": {
@@ -2040,7 +2042,7 @@
     "hook": "Für Mamas zwischen Job und Kita.",
     "caption": "Für Mamas zwischen Job und Kita. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Für Mamas zwischen Job und Kita. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für Mamas zwischen Job und Kita. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für Mamas zwischen Job und Kita. #shorts",
     "media": {
@@ -2062,7 +2064,7 @@
     "hook": "Für die Freundin, die gerade ein Baby bekommen hat.",
     "caption": "Für die Freundin, die gerade ein Baby bekommen hat. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #mamaliebe",
     "captions": {
-      "youtube": "Für die Freundin, die gerade ein Baby bekommen hat. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für die Freundin, die gerade ein Baby bekommen hat. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für die Freundin, die gerade ein Baby bekommen hat. #shorts",
     "media": {
@@ -2084,7 +2086,7 @@
     "hook": "Der Wäschekorb ist kein Zeugnis.",
     "caption": "Der Wäschekorb ist kein Zeugnis. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "Der Wäschekorb ist kein Zeugnis. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Der Wäschekorb ist kein Zeugnis. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Der Wäschekorb ist kein Zeugnis. #shorts",
     "media": {
@@ -2106,7 +2108,7 @@
     "hook": "Du bist nicht nur Mama.",
     "caption": "Du bist nicht nur Mama. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Du bist nicht nur Mama. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Du bist nicht nur Mama. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Du bist nicht nur Mama. #shorts",
     "media": {
@@ -2128,7 +2130,7 @@
     "hook": "Bevor du dich für deinen Ton verurteilst:",
     "caption": "Bevor du dich für deinen Ton verurteilst: Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "Bevor du dich für deinen Ton verurteilst: Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Bevor du dich für deinen Ton verurteilst: Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Bevor du dich für deinen Ton verurteilst: #shorts",
     "media": {
@@ -2150,7 +2152,7 @@
     "hook": "Du musst heute nicht alles schaffen.",
     "caption": "Du musst heute nicht alles schaffen. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Du musst heute nicht alles schaffen. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Du musst heute nicht alles schaffen. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Du musst heute nicht alles schaffen. #shorts",
     "media": {
@@ -2172,7 +2174,7 @@
     "hook": "Für die Kollegin, die um 15 Uhr los muss.",
     "caption": "Für die Kollegin, die um 15 Uhr los muss. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #mamaliebe",
     "captions": {
-      "youtube": "Für die Kollegin, die um 15 Uhr los muss. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für die Kollegin, die um 15 Uhr los muss. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für die Kollegin, die um 15 Uhr los muss. #shorts",
     "media": {
@@ -2194,7 +2196,7 @@
     "hook": "Wenn Nähe gerade zu viel ist.",
     "caption": "Wenn Nähe gerade zu viel ist. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "Wenn Nähe gerade zu viel ist. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Wenn Nähe gerade zu viel ist. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Wenn Nähe gerade zu viel ist. #shorts",
     "media": {
@@ -2216,7 +2218,7 @@
     "hook": "Für die Mama, die sich nie lobt.",
     "caption": "Für die Mama, die sich nie lobt. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Für die Mama, die sich nie lobt. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für die Mama, die sich nie lobt. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für die Mama, die sich nie lobt. #shorts",
     "media": {
@@ -2238,7 +2240,7 @@
     "hook": "„Sag doch einfach, was ich machen soll.“",
     "caption": "„Sag doch einfach, was ich machen soll.“ Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "„Sag doch einfach, was ich machen soll.“ Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "„Sag doch einfach, was ich machen soll.“ Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "„Sag doch einfach, was ich machen soll.“ #shorts",
     "media": {
@@ -2260,7 +2262,7 @@
     "hook": "Für Mamas mitten in der Trotzphase.",
     "caption": "Für Mamas mitten in der Trotzphase. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Für Mamas mitten in der Trotzphase. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für Mamas mitten in der Trotzphase. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für Mamas mitten in der Trotzphase. #shorts",
     "media": {
@@ -2282,7 +2284,7 @@
     "hook": "Für die Mama, die sich nie eine Pause gönnt.",
     "caption": "Für die Mama, die sich nie eine Pause gönnt. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #mamaliebe",
     "captions": {
-      "youtube": "Für die Mama, die sich nie eine Pause gönnt. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für die Mama, die sich nie eine Pause gönnt. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für die Mama, die sich nie eine Pause gönnt. #shorts",
     "media": {
@@ -2304,7 +2306,7 @@
     "hook": "Ein schwerer Tag ist kein Urteil.",
     "caption": "Ein schwerer Tag ist kein Urteil. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #equalcare",
     "captions": {
-      "youtube": "Ein schwerer Tag ist kein Urteil. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Ein schwerer Tag ist kein Urteil. Welcher Punkt ist bei dir gerade am lautesten? MamaFunke gibt dir einen ehrlichen Satz statt noch einer To-do-Liste. Kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Ein schwerer Tag ist kein Urteil. #shorts",
     "media": {
@@ -2326,7 +2328,7 @@
     "hook": "Für die Nächte, die kein Ende nehmen.",
     "caption": "Für die Nächte, die kein Ende nehmen. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok",
     "captions": {
-      "youtube": "Für die Nächte, die kein Ende nehmen. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für die Nächte, die kein Ende nehmen. Speicher dir den Satz für später. MamaFunke: Affirmationen für Mütter, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für die Nächte, die kein Ende nehmen. #shorts",
     "media": {
@@ -2348,7 +2350,7 @@
     "hook": "Für deine alleinerziehende Freundin.",
     "caption": "Für deine alleinerziehende Freundin. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de #mamaalltag #mentalload #mamaleben #mamasein #momtok #mamaliebe",
     "captions": {
-      "youtube": "Für deine alleinerziehende Freundin. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos, Link im Profil oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
+      "youtube": "Für deine alleinerziehende Freundin. Teile diesen Post mit ihr. Mehr solche Sätze gibt es in MamaFunke, kostenlos oder mamafunke.de\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Für deine alleinerziehende Freundin. #shorts",
     "media": {
