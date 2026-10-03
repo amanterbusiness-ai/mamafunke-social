@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mental-Load-Test für Mamas: Wie voll ist dein Kopf?</title>
+<meta name="description" content="Der kostenlose Mental-Load-Test für Mütter: 10 Fragen, 1 Minute. Finde heraus, wie viele Tabs in deinem Kopf offen sind, und nimm einen entlastenden Satz mit. Ohne Anmeldung, ohne Daten.">
+<link rel="canonical" href="https://mamafunke.de/test/">
+<link rel="icon" href="/icon.png">
+<meta name="theme-color" content="#faf6ef">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="MamaFunke">
+<meta property="og:title" content="Mental-Load-Test für Mamas: Wie voll ist dein Kopf?">
+<meta property="og:description" content="10 Fragen, 1 Minute. Ehrlich, ohne Bewertung. Wie viele Tabs hat dein Kopf gerade offen?">
+<meta property="og:url" content="https://mamafunke.de/test/">
+<meta property="og:image" content="https://mamafunke.de/test/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mental-Load-Test für Mamas: Wie voll ist dein Kopf?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mental-Load-Test für Mamas: Wie voll ist dein Kopf?">
+<meta name="twitter:description" content="10 Fragen, 1 Minute. Ehrlich, ohne Bewertung.">
+<meta name="twitter:image" content="https://mamafunke.de/test/og.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Mental-Load-Test für Mamas: Wie voll ist dein Kopf?",
+  "description": "Der kostenlose Mental-Load-Test für Mütter: 10 Fragen, 1 Minute, ohne Anmeldung.",
+  "inLanguage": "de-DE",
+  "url": "https://mamafunke.de/test/",
+  "image": "https://mamafunke.de/test/og.png",
+  "publisher": { "@type": "Organization", "name": "MamaFunke", "url": "https://mamafunke.de/" }
+}
+</script>
+<style>
+:root {
+  --creme: #faf6ef; --tinte: #29251f; --koralle: #b5583c; --koralle-text: #a04a30;
+  --gold: #e5a93d; --salbei: #788b78; --salbei-text: #4e6350;
+  --leise: #5f584e; --linie: #e8dfd0; --weiss: #fff;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+  --dauer: .32s;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--creme); color: var(--tinte);
+  font-family: var(--sans); font-size: 1.125rem; line-height: 1.6;
+  padding: max(14px, env(safe-area-inset-top)) 18px max(28px, env(safe-area-inset-bottom));
+}
+.wrap { max-width: 620px; margin: 0 auto; }
+header.top { display: flex; align-items: center; gap: 10px; padding: 4px 0 14px; border-bottom: 1px solid var(--linie); margin-bottom: 22px; }
+header.top img { width: 36px; height: 36px; border-radius: 9px; }
+header.top a { color: var(--tinte); text-decoration: none; font-weight: 700; }
+header.top nav { margin-left: auto; font-size: 1rem; }
+header.top nav a { color: var(--salbei-text); font-weight: 600; }
+h1, h2 { font-family: var(--serif); font-weight: 600; line-height: 1.2; }
+h1 { font-size: clamp(2.1rem, 8vw, 2.9rem); margin: 8px 0 12px; }
+h2 { font-size: 1.5rem; margin: 0 0 10px; }
+p { margin: 0 0 1em; }
+a { color: #8a5a10; }
+.leise { color: var(--leise); }
+.klein { font-size: 1rem; }
+
+.screen { animation: rein var(--dauer) ease both; }
+@keyframes rein { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.knopf {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 56px; padding: 14px 26px; border-radius: 999px; border: 0;
+  background: var(--gold); color: var(--tinte); font: inherit; font-weight: 700; font-size: 1.15rem;
+  text-decoration: none; cursor: pointer; transition: transform var(--dauer), box-shadow var(--dauer);
+}
+.knopf:hover { box-shadow: 0 4px 14px rgba(41,37,31,.15); }
+.knopf:active { transform: scale(.98); }
+.knopf.zweit { background: var(--weiss); border: 2px solid var(--linie); font-weight: 600; font-size: 1.05rem; }
+.knopf.breit { width: 100%; }
+:focus-visible { outline: 3px solid var(--koralle); outline-offset: 3px; }
+
+.start { text-align: center; padding-top: 6px; }
+.start img.mali { width: 190px; height: 190px; display: block; margin: 0 auto 6px; }
+.start .unter { font-size: 1.25rem; color: var(--leise); margin-bottom: 26px; }
+.start .fakten { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: center; font-size: 1rem; color: var(--leise); }
+.start .fakten li::before { content: "\2713\00a0"; color: var(--salbei-text); font-weight: 700; }
+
+.fortschritt { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; font-size: 1rem; color: var(--leise); }
+.balken { flex: 1; height: 10px; background: var(--linie); border-radius: 99px; overflow: hidden; }
+.balken span { display: block; height: 100%; width: 0; background: var(--salbei); border-radius: 99px; transition: width var(--dauer) ease; }
+.aussage { font-family: var(--serif); font-size: clamp(1.55rem, 6vw, 2rem); line-height: 1.3; margin: 0 0 22px; font-weight: 600; outline: none; }
+.antworten { display: grid; gap: 12px; margin: 0 0 18px; padding: 0; border: 0; }
+.antworten legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.antwort {
+  display: flex; align-items: center; gap: 14px; width: 100%; min-height: 60px; padding: 14px 18px;
+  background: var(--weiss); border: 2px solid var(--linie); border-radius: 16px;
+  font: inherit; font-size: 1.15rem; color: var(--tinte); text-align: left; cursor: pointer;
+  transition: border-color var(--dauer), background var(--dauer), transform var(--dauer);
+}
+.antwort:hover { border-color: var(--salbei); }
+.antwort .punkt { width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--salbei); flex: none; transition: background var(--dauer), box-shadow var(--dauer); }
+.antwort[aria-pressed="true"] { border-color: var(--salbei-text); background: #eef2ec; }
+.antwort[aria-pressed="true"] .punkt { background: var(--salbei-text); box-shadow: inset 0 0 0 4px #eef2ec; }
+.tipp { background: var(--weiss); border-left: 4px solid var(--gold); border-radius: 10px; padding: 12px 16px; font-size: 1.05rem; color: var(--leise); margin: 0 0 20px; }
+.tipp strong { color: var(--tinte); }
+.nav { display: flex; gap: 12px; justify-content: space-between; }
+.nav .knopf.zweit[disabled] { visibility: hidden; }
+
+.ergebnis { text-align: center; }
+.ergtitel { margin: 6px 0 14px; outline: none; }
+.ergtitel span { display: block; }
+.ergtitel .vorspann, .ergtitel .offen { font-size: 1.35rem; font-weight: 500; color: var(--leise); }
+.zahl { font-weight: 700; color: var(--koralle); font-size: clamp(5.5rem, 28vw, 8rem); line-height: 1.05; }
+.zahl small { font-size: .38em; color: var(--tinte); font-weight: 600; }
+.stufe { display: inline-block; background: #eef2ec; color: var(--salbei-text); font-weight: 700; font-size: 1rem; padding: 6px 14px; border-radius: 99px; margin-bottom: 14px; }
+.ergebnis .text { text-align: left; font-size: 1.15rem; }
+.satz { background: var(--weiss); border: 1px solid var(--linie); border-top: 4px solid var(--gold); border-radius: 16px; padding: 18px 20px; margin: 22px 0; text-align: left; }
+.satz .label { font-size: .95rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--koralle-text); margin: 0 0 6px; }
+.satz blockquote { margin: 0; font-family: var(--serif); font-size: 1.4rem; line-height: 1.4; }
+
+.karte { margin: 26px 0; }
+.formate { display: inline-flex; gap: 6px; padding: 5px; background: var(--weiss); border: 1px solid var(--linie); border-radius: 99px; margin-bottom: 16px; }
+.formate button { min-height: 44px; padding: 8px 18px; border: 0; border-radius: 99px; background: transparent; font: inherit; font-size: 1rem; font-weight: 600; color: var(--leise); cursor: pointer; }
+.formate button[aria-pressed="true"] { background: var(--tinte); color: var(--creme); }
+.vorschau { display: block; margin: 0 auto 18px; max-width: min(100%, 320px); height: auto; border-radius: 18px; box-shadow: 0 10px 30px rgba(41,37,31,.16); background: var(--creme); }
+.aktionen { display: grid; gap: 12px; }
+.meldung { min-height: 1.6em; font-size: 1rem; color: var(--salbei-text); font-weight: 600; margin: 8px 0 0; }
+
+.app { background: var(--weiss); border: 1px solid var(--linie); border-top: 4px solid var(--salbei); border-radius: 18px; padding: 22px 20px; margin: 30px 0 22px; text-align: left; display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.app img { width: 64px; height: 64px; border-radius: 15px; flex: none; }
+.app .inhalt { flex: 1 1 220px; }
+.app p { font-size: 1.15rem; margin-bottom: 14px; }
+.hinweis { text-align: left; font-size: 1rem; color: var(--leise); border-top: 1px solid var(--linie); padding-top: 14px; }
+.hilfe { background: #fff4ec; border: 1px solid #f0d6c6; border-radius: 14px; padding: 14px 16px; color: var(--tinte); margin-top: 12px; }
+.hilfe a { color: var(--koralle-text); font-weight: 700; }
+.nochmal { background: none; border: 0; color: #8a5a10; text-decoration: underline; font: inherit; font-size: 1rem; cursor: pointer; padding: 10px; min-height: 44px; }
+footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--linie); font-size: 1rem; color: var(--leise); text-align: center; }
+footer a { color: var(--leise); }
+
+@media (min-width: 720px) {
+  body { font-size: 1.1875rem; }
+  .aktionen { grid-template-columns: 1fr 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --dauer: 0s; }
+  .screen { animation: none; }
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a href="/"><img src="icon.png" alt="" width="36" height="36"></a>
+  <a href="/">MamaFunke</a>
+  <nav><a href="/ratgeber/mental-load-mama/">Was ist Mental Load?</a></nav>
+</header>
+
+<main id="app" aria-live="polite">
+  <section class="screen start" id="start">
+    <img class="mali" src="mali.webp" alt="" width="190" height="190">
+    <h1>Wie voll ist dein Kopf?</h1>
+    <p class="unter">10 Fragen, 1 Minute. Ehrlich, ohne Bewertung.</p>
+    <button class="knopf" id="los" type="button">Test starten</button>
+    <ul class="fakten">
+      <li>ohne Anmeldung</li>
+      <li>keine Daten verlassen dein Handy</li>
+      <li>kostenlos</li>
+    </ul>
+  </section>
+  <noscript><p>Für den Test brauchst du JavaScript im Browser. Es werden keine Daten gesendet.</p></noscript>
+</main>
+
+<footer>
+  <p><a href="/">MamaFunke</a> · <a href="/ratgeber/">Ratgeber</a> · <a href="/ratgeber/mental-load-mama/">Mental Load verstehen</a></p>
+  <p class="klein">Alles läuft nur in deinem Browser. Keine Cookies, kein Tracking, keine Übertragung deiner Antworten.</p>
+</footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var FRAGEN = [
+    { a: "Ich denke an Termine, an die sonst niemand denkt.",
+      t: "Arzt, Kita-Fest, Elternabend: Wer erinnert, trägt eine Aufgabe, auch wenn jemand anderes hingeht." },
+    { a: "Ich merke, dass etwas fehlt (Windeln, Milch, Geschenk), bevor es jemand anderem auffällt.",
+      t: "Bemerken ist der unsichtbare erste Schritt jeder Erledigung. Er zählt mit." },
+    { a: "Ich liege abends wach und plane den nächsten Tag.",
+      t: "Ein Zettel neben dem Bett kann helfen: Was draufsteht, muss der Kopf nicht festhalten." },
+    { a: "Ich erkläre anderen, wo Dinge sind oder was zu tun ist.",
+      t: "Wer ständig gefragt wird, ist die Schaltzentrale. Das kostet mehr Kraft, als es von außen aussieht." },
+    { a: "Wenn ich etwas nicht übernehme, bleibt es liegen.",
+      t: "Liegenlassen ist manchmal der ehrlichste Weg, um sichtbar zu machen, wer was trägt." },
+    { a: "Ich habe ein schlechtes Gewissen, wenn ich mir Zeit für mich nehme.",
+      t: "Pause ist keine Belohnung, die du dir erst verdienen musst. Sie ist Teil davon, gut zu sorgen." },
+    { a: "Ich behalte im Blick, was die Kinder brauchen: Kleidung, Größen, Zettel, Impfungen.",
+      t: "Diese Liste hat kein Ende. Darum hilft es, ganze Bereiche abzugeben, nicht nur einzelne Aufgaben." },
+    { a: "Selbst in ruhigen Momenten läuft im Kopf eine Liste mit.",
+      t: "Der Kopf entspannt oft erst, wenn die Liste woanders liegt: auf Papier oder bei einer zweiten Person." },
+    { a: "Wenn ich um Hilfe bitte, muss ich genau sagen, was zu tun ist.",
+      t: "Anleiten ist auch Arbeit. Echte Entlastung heißt: Jemand denkt die Aufgabe von Anfang bis Ende." },
+    { a: "Ich fühle mich erschöpft, obwohl ich körperlich gar nicht so viel getan habe.",
+      t: "Denkarbeit macht müde. Deine Erschöpfung ist echt, auch wenn man sie nicht sieht." }
+  ];
+  var ANTWORTEN = ["nie", "manchmal", "oft", "fast immer"];
+
+  // Stufen nach Tabs (0 bis 50). Impulse wortgleich aus mamafunke_impulses.json (status approved).
+  var STUFEN = [
+    { bis: 12, name: "Ein paar Tabs offen",
+      text: "Dein Kopf hat gerade etwas Luft. Das ist kostbar. Vielleicht teilt ihr euch vieles gut auf, vielleicht ist es eine ruhigere Phase. Achte darauf, was dir gerade hilft, damit du es festhalten kannst, wenn es wieder voller wird.",
+      impulse: [
+        { id: "mf-mental-load-016", s: "Heute reicht eine Sache nach der anderen." },
+        { id: "mf-selbstmitgefuehl-020", s: "Heute darfst du auf deiner eigenen Seite stehen." },
+        { id: "mf-selbstmitgefuehl-015", s: "Du darfst stolz auf das Unsichtbare sein, das du jeden Tag gibst." }
+      ] },
+    { bis: 25, name: "Einiges läuft nebenbei mit",
+      text: "Du trägst spürbar mit, oft ohne dass es jemand sieht. Das ist Arbeit, auch wenn sie auf keiner Liste steht. Ein guter Anfang: eine Sache benennen, die ab heute jemand anderes ganz übernimmt, mit allem Drandenken.",
+      impulse: [
+        { id: "mf-mental-load-017", s: "Auch Organisieren ist Arbeit. Du darfst sie so benennen." },
+        { id: "mf-mental-load-011", s: "Was heute nicht dringend ist, darf deinen Kopf verlassen." },
+        { id: "mf-mental-load-020", s: "Du darfst heute weniger im Kopf behalten." }
+      ] },
+    { bis: 38, name: "Viele Tabs gleichzeitig",
+      text: "Dein Kopf arbeitet viel, auch dann, wenn du eigentlich Pause hast. Das liegt nicht daran, dass du etwas falsch machst. Es zeigt, wie viel gerade an dir hängt. Du darfst diese Last sichtbar machen und Teile abgeben, bevor du leer bist.",
+      impulse: [
+        { id: "mf-mental-load-012", s: "Du darfst um Hilfe bitten, bevor du gar nicht mehr kannst." },
+        { id: "mf-mental-load-014", s: "Eine Pause ist auch dann erlaubt, wenn die Liste noch lang ist." },
+        { id: "mf-schuldgefuehle-020", s: "Du bist nicht schuldig, weil du eine Pause brauchst." }
+      ] },
+    { bis: 50, name: "Der Kopf ist randvoll",
+      text: "Du hältst gerade sehr viel zusammen, wahrscheinlich schon eine ganze Weile. Dass es sich schwer anfühlt, ist eine ehrliche Reaktion und kein Versagen. Du musst das nicht allein tragen. Erzähl einem Menschen, dem du vertraust, wie voll es gerade ist, und gib heute eine Sache wirklich ab.",
+      impulse: [
+        { id: "mf-mental-load-015", s: "Du musst den Tag nicht retten. Du darfst ihn vereinfachen." },
+        { id: "mf-selbstmitgefuehl-019", s: "Deine Müdigkeit ist kein Charakterfehler." },
+        { id: "mf-mental-load-013", s: "Nicht jede offene Aufgabe ist eine offene Schuld." }
+      ] }
+  ];
+
+  var URL_TEST = "https://mamafunke.de/test";
+  var FARBE = { creme: "#faf6ef", tinte: "#29251f", koralle: "#b5583c", gold: "#e5a93d", salbei: "#788b78", salbeiText: "#4e6350", leise: "#5f584e" };
+  var SERIF = 'Georgia, "Times New Roman", serif';
+  var SANS = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif';
+
+  var app = document.getElementById("app");
+  var antworten = new Array(FRAGEN.length).fill(null);
+  var index = 0;
+  var weiterTimer = null;
+  var ergebnis = null;
+  var format = "story";
+  var bilder = { mali: null, icon: null };
+
+  function el(tag, attrs, kinder) {
+    var e = document.createElement(tag);
+    if (attrs) for (var k in attrs) {
+      if (k === "text") e.textContent = attrs[k];
+      else if (k === "html") e.innerHTML = attrs[k];
+      else if (k.slice(0, 2) === "on") e.addEventListener(k.slice(2), attrs[k]);
+      else e.setAttribute(k, attrs[k]);
+    }
+    (kinder || []).forEach(function (c) { if (c) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return e;
+  }
+
+  function zeige(section, fokus) {
+    app.innerHTML = "";
+    app.appendChild(section);
+    window.scrollTo(0, 0);
+    if (fokus) fokus.focus({ preventScroll: true });
+  }
+
+  function ladeBild(src) {
+    return new Promise(function (ok) {
+      var i = new Image();
+      i.onload = function () { ok(i); };
+      i.onerror = function () { ok(null); };
+      i.src = src;
+    });
+  }
+  var bilderBereit = Promise.all([ladeBild("mali.webp"), ladeBild("icon.png")]).then(function (r) {
+    bilder.mali = r[0]; bilder.icon = r[1];
+  });
+
+  /* ---------- Fragen ---------- */
+  function frage() {
+    clearTimeout(weiterTimer);
+    var f = FRAGEN[index];
+    var titel = el("h1", { class: "aussage", tabindex: "-1", id: "aussage", text: f.a });
+    var gruppe = el("fieldset", { class: "antworten" }, [el("legend", { text: "Wie oft trifft das auf dich zu?" })]);
+    ANTWORTEN.forEach(function (txt, wert) {
+      gruppe.appendChild(el("button", {
+        type: "button", class: "antwort", "aria-pressed": String(antworten[index] === wert),
+        onclick: function () { waehle(wert); }
+      }, [el("span", { class: "punkt", "aria-hidden": "true" }), txt]));
+    });
+    var weiterKnopf = el("button", {
+      type: "button", class: "knopf", id: "weiter",
+      onclick: function () { if (antworten[index] !== null) weiter(); }
+    }, [index === FRAGEN.length - 1 ? "Ergebnis zeigen" : "Weiter"]);
+    if (antworten[index] === null) weiterKnopf.setAttribute("aria-disabled", "true");
+    var sec = el("section", { class: "screen", "aria-labelledby": "aussage" }, [
+      el("div", { class: "fortschritt" }, [
+        el("span", { text: "Frage " + (index + 1) + " von " + FRAGEN.length }),
+        el("div", { class: "balken", role: "progressbar", "aria-label": "Fortschritt", "aria-valuemin": "0", "aria-valuemax": String(FRAGEN.length), "aria-valuenow": String(index + 1) }, [el("span")])
+      ]),
+      titel, gruppe,
+      el("p", { class: "tipp" }, [el("strong", { text: "Tipp: " }), f.t]),
+      el("div", { class: "nav" }, [
+        el("button", { type: "button", class: "knopf zweit", onclick: zurueck, disabled: index === 0 ? "" : null }, ["Zurück"]),
+        weiterKnopf
+      ])
+    ]);
+    if (index > 0) sec.querySelector(".nav .zweit").removeAttribute("disabled");
+    zeige(sec, titel);
+    var balken = sec.querySelector(".balken span");
+    balken.style.width = (index / FRAGEN.length * 100) + "%";
+    requestAnimationFrame(function () { requestAnimationFrame(function () { balken.style.width = ((index + 1) / FRAGEN.length * 100) + "%"; }); });
+  }
+
+  function waehle(wert) {
+    antworten[index] = wert;
+    var btns = app.querySelectorAll(".antwort");
+    btns.forEach(function (b, i) { b.setAttribute("aria-pressed", String(i === wert)); });
+    var w = document.getElementById("weiter");
+    if (w) w.removeAttribute("aria-disabled");
+    clearTimeout(weiterTimer);
+    weiterTimer = setTimeout(weiter, 380);
+  }
+  function weiter() {
+    clearTimeout(weiterTimer);
+    if (index < FRAGEN.length - 1) { index++; frage(); } else { auswerten(); }
+  }
+  function zurueck() {
+    clearTimeout(weiterTimer);
+    if (index > 0) { index--; frage(); }
+  }
+
+  /* ---------- Ergebnis ---------- */
+  function auswerten() {
+    var summe = antworten.reduce(function (a, b) { return a + (b || 0); }, 0); // 0 bis 30
+    var tabs = Math.round(summe / (FRAGEN.length * 3) * 50);
+    var stufeNr = 0;
+    while (tabs > STUFEN[stufeNr].bis) stufeNr++;
+    var stufe = STUFEN[stufeNr];
+    var impuls = stufe.impulse[summe % 3]; // deterministisch nach Punktzahl
+    ergebnis = { tabs: tabs, stufeNr: stufeNr, stufe: stufe, impuls: impuls };
+    zeigeErgebnis();
+  }
+
+  function zeigeErgebnis() {
+    var r = ergebnis;
+    var titel = el("h1", { tabindex: "-1", id: "ergtitel", class: "ergtitel" }, [
+      el("span", { class: "vorspann", text: "Dein Kopf hat " }),
+      el("span", { class: "zahl" }, [String(r.tabs), el("small", { text: " Tabs" })]),
+      el("span", { class: "offen", text: " offen." })
+    ]);
+    var vorschau = el("img", { class: "vorschau", id: "vorschau", alt: "Deine Ergebniskarte: " + r.tabs + " Tabs. " + r.impuls.s });
+    var meldung = el("p", { class: "meldung", id: "meldung", role: "status" });
+    var speichern = el("a", { class: "knopf zweit breit", id: "speichern", download: "mamafunke-test-" + r.tabs + "-tabs.png", href: "#" }, ["Bild speichern"]);
+    var teilen = null;
+    if (navigator.canShare && typeof File !== "undefined") {
+      teilen = el("button", { type: "button", class: "knopf breit", id: "teilen", onclick: teileBild }, ["Teilen"]);
+    }
+    var wa = "https://wa.me/?text=" + encodeURIComponent("Ich habe den Mental-Load-Test gemacht: Mein Kopf hat gerade " + r.tabs + " Tabs offen. Wie viele sind es bei dir? " + URL_TEST);
+
+    var hinweis = el("div", { class: "hinweis" }, [el("p", { text: "Der Test ist keine Diagnose. Er soll dir helfen, Unsichtbares sichtbar zu machen." })]);
+    if (r.stufeNr >= 2) {
+      hinweis.appendChild(el("div", { class: "hilfe" }, [
+        el("p", { text: "Wenn es dir länger schon zu viel ist oder du dich leer und hoffnungslos fühlst, sprich mit jemandem. Die TelefonSeelsorge ist rund um die Uhr kostenlos und anonym für dich da:" }),
+        el("p", {}, [el("a", { href: "tel:08001110111", text: "0800 1110111" }), " oder ", el("a", { href: "tel:116123", text: "116 123" }), ". Im Notfall wähle ", el("a", { href: "tel:112", text: "112" }), "."])
+      ]));
+    }
+
+    var sec = el("section", { class: "screen ergebnis", "aria-labelledby": "ergtitel" }, [
+      titel,
+      el("span", { class: "stufe", text: r.stufe.name }),
+      el("p", { class: "text", text: r.stufe.text }),
+      el("div", { class: "satz" }, [el("p", { class: "label", text: "Dein Satz für heute" }), el("blockquote", { text: r.impuls.s })]),
+      el("div", { class: "karte" }, [
+        el("h2", { text: "Deine Karte zum Teilen" }),
+        el("div", { class: "formate", role: "group", "aria-label": "Format der Karte" }, [
+          el("button", { type: "button", "aria-pressed": String(format === "story"), "data-f": "story", onclick: formatWahl }, ["Story"]),
+          el("button", { type: "button", "aria-pressed": String(format === "feed"), "data-f": "feed", onclick: formatWahl }, ["Feed"])
+        ]),
+        vorschau,
+        el("div", { class: "aktionen" }, [
+          teilen, speichern,
+          el("button", { type: "button", class: "knopf zweit breit", onclick: kopiereLink }, ["Link kopieren"]),
+          el("a", { class: "knopf zweit breit", href: wa, target: "_blank", rel: "noopener" }, ["Einer Mama schicken"])
+        ]),
+        meldung
+      ]),
+      el("div", { class: "app" }, [
+        el("img", { src: "icon.png", alt: "", width: "64", height: "64" }),
+        el("div", { class: "inhalt" }, [
+          el("p", { text: "Ein Satz am Tag, direkt auf deinem Startbildschirm: MamaFunke, kostenlos, ohne Konto, ohne Werbung." }),
+          el("a", { class: "knopf", href: "https://mamafunke.de/teilen" }, ["App laden"])
+        ])
+      ]),
+      hinweis,
+      el("p", {}, [el("button", { type: "button", class: "nochmal", onclick: neuStart }, ["Test noch einmal machen"])])
+    ]);
+    zeige(sec, titel);
+    zeichneKarte();
+  }
+
+  function formatWahl(e) {
+    format = e.currentTarget.getAttribute("data-f");
+    app.querySelectorAll(".formate button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-f") === format)); });
+    zeichneKarte();
+  }
+
+  /* ---------- Karte (Canvas) ---------- */
+  var aktuellesCanvas = null;
+
+  function umbrechen(ctx, text, breite) {
+    var woerter = text.split(" "), zeilen = [], z = "";
+    woerter.forEach(function (w) {
+      var test = z ? z + " " + w : w;
+      if (ctx.measureText(test).width > breite && z) { zeilen.push(z); z = w; } else { z = test; }
+    });
+    if (z) zeilen.push(z);
+    return zeilen;
+  }
+
+  function zeichneKarte() {
+    bilderBereit.then(function () {
+      var r = ergebnis, story = format === "story";
+      var W = 1080, H = story ? 1920 : 1350;
+      var c = document.createElement("canvas");
+      c.width = W; c.height = H;
+      var ctx = c.getContext("2d");
+      ctx.fillStyle = FARBE.creme; ctx.fillRect(0, 0, W, H);
+      // sanfte Kreise
+      ctx.fillStyle = "rgba(229,169,61,.16)";
+      ctx.beginPath(); ctx.arc(W - 60, story ? 260 : 170, story ? 300 : 230, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "rgba(120,139,120,.14)";
+      ctx.beginPath(); ctx.arc(40, H - (story ? 340 : 230), story ? 260 : 190, 0, Math.PI * 2); ctx.fill();
+      ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";
+
+      var y = story ? 210 : 100;
+      // Marke oben
+      if (bilder.icon) {
+        ctx.save();
+        var ix = W / 2 - 150, is = 64;
+        ctx.beginPath();
+        if (ctx.roundRect) ctx.roundRect(ix, y - 48, is, is, 16); else ctx.rect(ix, y - 48, is, is);
+        ctx.clip(); ctx.drawImage(bilder.icon, ix, y - 48, is, is); ctx.restore();
+        ctx.textAlign = "left"; ctx.fillStyle = FARBE.tinte; ctx.font = "700 46px " + SANS;
+        ctx.fillText("MamaFunke", ix + is + 20, y);
+        ctx.textAlign = "center";
+      }
+      y += story ? 60 : 40;
+
+      // Mali
+      var ms = story ? 380 : 250;
+      if (bilder.mali) ctx.drawImage(bilder.mali, W / 2 - ms / 2, y, ms, ms);
+      y += ms + (story ? 110 : 70);
+
+      ctx.fillStyle = FARBE.leise; ctx.font = "500 " + (story ? 62 : 50) + "px " + SERIF;
+      ctx.fillText("Mein Kopf hat gerade", W / 2, y);
+      y += story ? 290 : 200;
+
+      // Große Zahl
+      var zahl = String(r.tabs);
+      var zf = story ? 320 : 220, tf = story ? 126 : 90;
+      ctx.font = "700 " + zf + "px " + SERIF; var zw = ctx.measureText(zahl).width;
+      ctx.font = "600 " + tf + "px " + SERIF; var tw = ctx.measureText(" Tabs").width;
+      var x0 = W / 2 - (zw + tw) / 2;
+      ctx.textAlign = "left";
+      ctx.fillStyle = FARBE.koralle; ctx.font = "700 " + zf + "px " + SERIF; ctx.fillText(zahl, x0, y);
+      ctx.fillStyle = FARBE.tinte; ctx.font = "600 " + tf + "px " + SERIF; ctx.fillText(" Tabs", x0 + zw, y);
+      ctx.textAlign = "center";
+      y += story ? 95 : 75;
+      ctx.fillStyle = FARBE.leise; ctx.font = "500 " + (story ? 58 : 46) + "px " + SERIF;
+      ctx.fillText("offen.", W / 2, y);
+      y += story ? 85 : 60;
+
+      // Stufe als Pille
+      ctx.font = "700 " + (story ? 44 : 36) + "px " + SANS;
+      var pw = ctx.measureText(r.stufe.name).width + 70, ph = story ? 84 : 66;
+      ctx.fillStyle = "#e6ece4";
+      ctx.beginPath();
+      if (ctx.roundRect) ctx.roundRect(W / 2 - pw / 2, y, pw, ph, ph / 2); else ctx.rect(W / 2 - pw / 2, y, pw, ph);
+      ctx.fill();
+      ctx.fillStyle = FARBE.salbeiText; ctx.fillText(r.stufe.name, W / 2, y + ph / 2 + 14);
+      y += ph + (story ? 120 : 80);
+
+      // Goldlinie und Satz
+      ctx.fillStyle = FARBE.gold; ctx.fillRect(W / 2 - 60, y - 40, 120, 8);
+      ctx.fillStyle = FARBE.koralle; ctx.font = "700 " + (story ? 38 : 30) + "px " + SANS;
+      ctx.fillText("MEIN SATZ FÜR HEUTE", W / 2, y + 20);
+      y += story ? 115 : 90;
+      var sf = story ? 68 : 52;
+      ctx.font = "italic 500 " + sf + "px " + SERIF; ctx.fillStyle = FARBE.tinte;
+      var zeilen = umbrechen(ctx, "„" + r.impuls.s + "“", W - 200);
+      zeilen.forEach(function (z, i) { ctx.fillText(z, W / 2, y + i * sf * 1.32); });
+
+      // Fuß
+      ctx.fillStyle = FARBE.tinte; ctx.font = "600 " + (story ? 44 : 36) + "px " + SANS;
+      ctx.fillText("Wie viele sind es bei dir?", W / 2, H - (story ? 140 : 115));
+      ctx.fillStyle = FARBE.leise; ctx.font = "500 " + (story ? 40 : 32) + "px " + SANS;
+      ctx.fillText("mamafunke.de/test", W / 2, H - (story ? 80 : 65));
+
+      aktuellesCanvas = c;
+      var url = c.toDataURL("image/png");
+      var v = document.getElementById("vorschau");
+      if (v) { v.src = url; v.width = W; v.height = H; }
+      var s = document.getElementById("speichern");
+      if (s) { s.href = url; s.setAttribute("download", "mamafunke-test-" + r.tabs + "-tabs-" + format + ".png"); }
+    });
+  }
+
+  function melde(t) {
+    var m = document.getElementById("meldung");
+    if (m) { m.textContent = t; setTimeout(function () { if (m.textContent === t) m.textContent = ""; }, 4000); }
+  }
+
+  function teileBild() {
+    if (!aktuellesCanvas) return;
+    aktuellesCanvas.toBlob(function (blob) {
+      var datei = new File([blob], "mamafunke-test-" + ergebnis.tabs + "-tabs.png", { type: "image/png" });
+      var daten = { files: [datei], title: "Mental-Load-Test", text: "Mein Kopf hat gerade " + ergebnis.tabs + " Tabs offen. Wie viele sind es bei dir? " + URL_TEST };
+      if (navigator.canShare(daten)) {
+        navigator.share(daten).catch(function () {});
+      } else if (navigator.share) {
+        navigator.share({ title: daten.title, text: daten.text, url: URL_TEST }).catch(function () {});
+      } else {
+        melde("Teilen geht hier nicht. Nutze „Bild speichern“.");
+      }
+    }, "image/png");
+  }
+
+  function kopiereLink() {
+    var ok = function () { melde("Link kopiert."); };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(URL_TEST).then(ok, alt);
+    } else { alt(); }
+    function alt() {
+      var t = el("textarea", { readonly: "", style: "position:fixed;opacity:0" });
+      t.value = URL_TEST; document.body.appendChild(t); t.select();
+      try { document.execCommand("copy"); ok(); } catch (e) { melde(URL_TEST); }
+      document.body.removeChild(t);
+    }
+  }
+
+  function neuStart() {
+    antworten = new Array(FRAGEN.length).fill(null);
+    index = 0; ergebnis = null;
+    frage();
+  }
+
+  document.getElementById("los").addEventListener("click", function () { index = 0; frage(); });
+})();
+</script>
+</body>
+</html>
