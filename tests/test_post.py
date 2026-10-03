@@ -30,3 +30,11 @@ def test_plan_ist_gueltig():
         assert ("date" in p) != ("nach_apple" in p), p["id"]
         if p["kind"] == "reel":
             assert (post.ROOT / p["media"]["video"]).exists(), p["id"]
+
+
+def test_keine_zwei_posts_zur_selben_zeit():
+    import json
+    from collections import Counter
+    plan = json.loads(post.PLAN.read_text(encoding="utf-8"))
+    doppelt = [k for k, n in Counter((p["date"], p["time"]) for p in plan if "date" in p).items() if n > 1]
+    assert not doppelt, doppelt
