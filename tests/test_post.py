@@ -38,3 +38,17 @@ def test_keine_zwei_posts_zur_selben_zeit():
     plan = json.loads(post.PLAN.read_text(encoding="utf-8"))
     doppelt = [k for k, n in Counter((p["date"], p["time"]) for p in plan if "date" in p).items() if n > 1]
     assert not doppelt, doppelt
+
+
+def test_jeder_instagram_post_bekommt_eine_story():
+    assert post.kanaele({"channels": ["instagram", "facebook"]}) == ["instagram", "facebook", "story"]
+    assert post.kanaele({"channels": ["tiktok", "youtube"]}) == ["tiktok", "youtube"]
+    assert post.kanaele({"channels": ["instagram"], "keine_story": True}) == ["instagram"]
+
+
+def test_story_medium_video_oder_erstes_hochformatbild():
+    reel = {"kind": "reel", "media": {"video": "media/videos/a.mp4"}}
+    slide = {"kind": "slide", "media": {"tiktok": ["media/x/tiktok-01.jpg", "media/x/tiktok-02.jpg"],
+                                        "instagram": ["media/x/instagram-01.jpg"]}}
+    assert post.story_medium(reel) == ("video_url", "media/videos/a.mp4")
+    assert post.story_medium(slide) == ("image_url", "media/x/tiktok-01.jpg")

@@ -1,4 +1,4 @@
-"""Veröffentlicht fällige Posts aus plan/posts.json auf Instagram, Facebook und YouTube.
+"""Veröffentlicht fällige Posts aus plan/posts.json auf Instagram (Feed und Story), Facebook und YouTube.
 
 Läuft in GitHub Actions alle 30 Minuten. Ein Post ist fällig, sobald seine
 Uhrzeit (deutsche Zeit) erreicht ist. Erledigtes steht in state/posted.json,
@@ -36,7 +36,7 @@ GRAPH = f"https://graph.facebook.com/{os.environ.get('GRAPH_VERSION', 'v25.0')}"
 # Verspätete Posts (z. B. nach einem Ausfall) nur bis zu diesem Abstand nachholen,
 # damit nicht Tage später ein Schwall alter Posts erscheint.
 MAX_DELAY = timedelta(hours=10)
-CHANNELS = ("instagram", "facebook", "youtube")
+CHANNELS = ("instagram", "facebook", "youtube", "story")
 
 
 def env(name: str) -> str:
@@ -133,6 +133,30 @@ def post_instagram(post: dict) -> str:
     return graph("POST", f"{ig}/media_publish", creation_id=c)["id"]
 
 
+def kanaele(post: dict) -> list[str]:
+    """Kanäle eines Posts. Jeder Instagram-Post erscheint zusätzlich als Story,
+    außer er hat "keine_story": true."""
+    liste = list(post["channels"])
+    if "instagram" in liste and not post.get("keine_story"):
+        liste.append("story")
+    return liste
+
+
+def story_medium(post: dict) -> tuple[str, str]:
+    """Video-Story für Reels, sonst das erste Hochformatbild (1080x1920)."""
+    if post["kind"] == "reel":
+        return "video_url", post["media"]["video"]
+    return "image_url", post["media"]["tiktok"][0]
+
+
+def post_story(post: dict) -> str:
+    ig = instagram_id()
+    feld, pfad = story_medium(post)
+    c = graph("POST", f"{ig}/media", media_type="STORIES", **{feld: media_url(pfad)})["id"]
+    wait_ready(c)
+    return graph("POST", f"{ig}/media_publish", creation_id=c)["id"]
+
+
 def post_facebook(post: dict) -> str:
     page = env("FB_PAGE_ID")
     token = page_token()
@@ -176,7 +200,8 @@ READY = {
     "facebook": lambda: env("META_PAGE_TOKEN") and env("FB_PAGE_ID"),
     "youtube": lambda: env("YT_REFRESH_TOKEN") and env("YT_CLIENT_ID") and env("YT_CLIENT_SECRET"),
 }
-POSTERS = {"instagram": post_instagram, "facebook": post_facebook, "youtube": post_youtube}
+READY["story"] = READY["instagram"]
+POSTERS = {"instagram": post_instagram, "facebook": post_facebook, "youtube": post_youtube, "story": post_story}
 
 
 def check() -> int:
@@ -230,7 +255,7 @@ def main() -> int:
         if due is None or due > now:
             continue
         for channel in CHANNELS:
-            if channel not in post["channels"] or f"{post['id']}:{channel}" in state:
+            if channel not in kanaele(post) or f"{post['id']}:{channel}" in state:
                 continue
             key = f"{post['id']}:{channel}"
             if now - due > MAX_DELAY:
