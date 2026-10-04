@@ -55,7 +55,7 @@ def test_story_medium_video_oder_erstes_hochformatbild():
 
 
 def test_tiktok_api_nur_fuer_reels_mit_tiktok():
-    assert post.kanaele({"kind": "reel", "channels": ["tiktok", "youtube"]}) == ["tiktok", "youtube", "tiktok_api"]
+    assert post.kanaele({"kind": "reel", "channels": ["tiktok", "youtube"], "date": "2026-10-20"}) == ["tiktok", "youtube", "tiktok_api"]
     assert post.kanaele({"kind": "slide", "channels": ["tiktok"]}) == ["tiktok"]
     assert post.kanaele({"kind": "reel", "channels": ["youtube"]}) == ["youtube"]
 
