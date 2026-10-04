@@ -9,6 +9,10 @@ on:
         description: "Nur Zugänge prüfen, nichts posten"
         type: boolean
         default: true
+      tiktok_test:
+        description: "Einmaliger TikTok-Test: ID eines Reels aus plan/posts.json (leer lassen)"
+        type: string
+        default: ""
 
 concurrency:
   group: posten
@@ -40,6 +44,7 @@ jobs:
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
           TIKTOK_MODUS: ${{ vars.TIKTOK_MODUS }}
+          TIKTOK_TEST: ${{ inputs.tiktok_test }}
           MEDIA_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/main
         run: python scripts/post.py ${{ inputs.check && '--check' || '' }}
       - name: Stand sichern

@@ -116,3 +116,8 @@ def test_tiktok_api_erst_ab_stichtag():
     neu = {"channels": ["tiktok"], "kind": "reel", "date": "2026-10-13"}
     assert "tiktok_api" not in post.kanaele(alt)
     assert "tiktok_api" in post.kanaele(neu)
+
+
+def test_tiktok_test_unbekannte_id(monkeypatch):
+    monkeypatch.setenv("TIKTOK_TEST", "gibt-es-nicht")
+    assert post.tiktok_test("gibt-es-nicht") == 1

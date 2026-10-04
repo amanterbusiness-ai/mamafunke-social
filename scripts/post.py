@@ -342,6 +342,18 @@ def check() -> int:
     return 0 if ok else 1
 
 
+def tiktok_test(post_id: str) -> int:
+    """Einmaliger Test: lädt ein Reel aus dem Plan an TikTok (ohne state/posted.json).
+    Ausgelöst per Workflow-Eingabe tiktok_test (Umgebungsvariable TIKTOK_TEST)."""
+    plan = json.loads(PLAN.read_text(encoding="utf-8"))
+    post = next((p for p in plan if p["id"] == post_id and p.get("kind") == "reel"), None)
+    if post is None:
+        print(f"Kein Reel mit der ID {post_id} im Plan", file=sys.stderr)
+        return 1
+    print(f"TikTok-Test {post_id}: {post_tiktok(post)}")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
@@ -349,6 +361,8 @@ def main() -> int:
     ap.add_argument("--check", action="store_true", help="nur Zugänge prüfen, nichts posten")
     args = ap.parse_args()
 
+    if env("TIKTOK_TEST"):
+        return tiktok_test(env("TIKTOK_TEST"))
     if args.check:
         return check()
 
