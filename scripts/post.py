@@ -286,6 +286,7 @@ def post_tiktok(post: dict) -> str:
                 "Content-Type": "video/mp4", "Content-Range": f"bytes {anfang}-{ende}/{groesse}"})
             if r.status_code >= 400:
                 raise RuntimeError(f"TikTok-Upload {anfang}-{ende}: {r.status_code} {r.text[:200]}")
+    status: dict = {}
     for _ in range(60):
         status = tiktok("post/publish/status/fetch/", token, publish_id=init["publish_id"])
         if status.get("status") in ("SEND_TO_USER_INBOX", "PUBLISH_COMPLETE"):
@@ -293,7 +294,7 @@ def post_tiktok(post: dict) -> str:
         if status.get("status") == "FAILED":
             raise RuntimeError(f"TikTok-Verarbeitung: {status.get('fail_reason')}")
         time.sleep(10)
-    raise RuntimeError("TikTok-Verarbeitung dauert zu lange")
+    raise RuntimeError(f"TikTok-Verarbeitung dauert zu lange, letzter Status: {status}")
 
 
 READY = {
