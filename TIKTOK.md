@@ -10,8 +10,9 @@ https://github.com/amanterbusiness-ai/mamafunke-social
 
 **Reels und die TikTok-API:** Sobald im Repository das Secret
 `TIKTOK_REFRESH_TOKEN` existiert (`gh secret list -R amanterbusiness-ai/mamafunke-social`),
-lädt GitHub Actions die Reels selbst hoch (siehe TIKTOK_API.md). Dann hier
-**nur noch Slideshows** einplanen und Reels auslassen, sonst erscheinen sie doppelt.
+lädt GitHub Actions die Reels ab dem 13.10.2026 selbst hoch (siehe TIKTOK_API.md,
+Stichtag TIKTOK_API_AB in scripts/post.py). Reels mit Termin ab dem 13.10. hier
+auslassen, Slideshows weiter einplanen, sonst erscheinen sie doppelt.
 Fehlt das Secret, gilt der Ablauf unten unverändert für alles.
 
 ## Ablauf (für Claude oder ChatGPT gleich)

@@ -43,6 +43,9 @@ GRAPH = f"https://graph.facebook.com/{os.environ.get('GRAPH_VERSION', 'v25.0')}"
 MAX_DELAY = timedelta(hours=10)
 CHANNELS = ("instagram", "facebook", "youtube", "story", "tiktok_api")
 TIKTOK = "https://open.tiktokapis.com/v2"
+# Bis einschließlich 12.10.2026 sind alle Reels schon in TikTok Studio eingeplant;
+# die API übernimmt erst danach, sonst kämen sie doppelt als Entwurf.
+TIKTOK_API_AB = "2026-10-13"
 MB = 1024 * 1024
 
 
@@ -147,7 +150,7 @@ def kanaele(post: dict) -> list[str]:
     liste = list(post["channels"])
     if "instagram" in liste and not post.get("keine_story"):
         liste.append("story")
-    if "tiktok" in liste and post.get("kind") == "reel":
+    if "tiktok" in liste and post.get("kind") == "reel" and post.get("date", "") >= TIKTOK_API_AB:
         liste.append("tiktok_api")
     return liste
 

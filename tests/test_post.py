@@ -109,3 +109,10 @@ def test_tiktok_pkce_hex_sha256():
     verifier, challenge = tiktok_auth.pkce()
     assert 43 <= len(verifier) <= 128
     assert challenge == hashlib.sha256(verifier.encode()).hexdigest()
+
+
+def test_tiktok_api_erst_ab_stichtag():
+    alt = {"channels": ["tiktok"], "kind": "reel", "date": "2026-10-12"}
+    neu = {"channels": ["tiktok"], "kind": "reel", "date": "2026-10-13"}
+    assert "tiktok_api" not in post.kanaele(alt)
+    assert "tiktok_api" in post.kanaele(neu)
