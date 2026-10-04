@@ -92,3 +92,7 @@ ausführen und im Repo unter Settings, Variables die Variable
 `TIKTOK_MODUS=direct` setzen. Dann gehen Caption, KI-Kennzeichnung
 (`is_aigc` aus `"ki"`) und "Deine Marke" (`brand_organic_toggle`) automatisch
 mit, und die Postfach-Schritte oben entfallen.
+
+## Stand 04.10.2026: abgeschaltet
+
+Direct Post ist laut TikTok Content Sharing Guidelines für Werkzeuge, die nur auf das eigene Konto posten, nicht zulässig, und verlangt pro Post eine manuelle Auswahl von Sichtbarkeit und Werbehinweis samt Zustimmung. Ein Antrag wurde deshalb nicht eingereicht. Der Upload-Modus funktioniert (Sandbox, getestet mit video-03-alltag), erzeugt aber nur Entwürfe mit Handarbeit in der App. Darum plant die Browser-Aufgabe wieder alle TikTok-Posts.

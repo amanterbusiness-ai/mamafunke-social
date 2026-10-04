@@ -55,7 +55,7 @@ def test_story_medium_video_oder_erstes_hochformatbild():
 
 
 def test_tiktok_api_nur_fuer_reels_mit_tiktok():
-    assert post.kanaele({"kind": "reel", "channels": ["tiktok", "youtube"], "date": "2026-10-20"}) == ["tiktok", "youtube", "tiktok_api"]
+    assert post.kanaele({"kind": "reel", "channels": ["tiktok", "youtube"], "date": post.TIKTOK_API_AB}) == ["tiktok", "youtube", "tiktok_api"]
     assert post.kanaele({"kind": "slide", "channels": ["tiktok"]}) == ["tiktok"]
     assert post.kanaele({"kind": "reel", "channels": ["youtube"]}) == ["youtube"]
 
@@ -113,7 +113,7 @@ def test_tiktok_pkce_hex_sha256():
 
 def test_tiktok_api_erst_ab_stichtag():
     alt = {"channels": ["tiktok"], "kind": "reel", "date": "2026-10-12"}
-    neu = {"channels": ["tiktok"], "kind": "reel", "date": "2026-10-13"}
+    neu = {"channels": ["tiktok"], "kind": "reel", "date": post.TIKTOK_API_AB}
     assert "tiktok_api" not in post.kanaele(alt)
     assert "tiktok_api" in post.kanaele(neu)
 

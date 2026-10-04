@@ -43,9 +43,11 @@ GRAPH = f"https://graph.facebook.com/{os.environ.get('GRAPH_VERSION', 'v25.0')}"
 MAX_DELAY = timedelta(hours=10)
 CHANNELS = ("instagram", "facebook", "youtube", "story", "tiktok_api")
 TIKTOK = "https://open.tiktokapis.com/v2"
-# Bis einschließlich 12.10.2026 sind alle Reels schon in TikTok Studio eingeplant;
-# die API übernimmt erst danach, sonst kämen sie doppelt als Entwurf.
-TIKTOK_API_AB = "2026-10-13"
+# Abgeschaltet (04.10.2026): Im Upload-Modus landet jedes Reel als Entwurf im
+# TikTok-Postfach und braucht dort Handarbeit; Direct Post ist für Werkzeuge, die
+# nur aufs eigene Konto posten, laut TikTok-Richtlinien nicht zulässig. Reels plant
+# deshalb weiter die Browser-Aufgabe (TIKTOK.md). Zum Einschalten ein Datum setzen.
+TIKTOK_API_AB = "2099-01-01"
 MB = 1024 * 1024
 
 

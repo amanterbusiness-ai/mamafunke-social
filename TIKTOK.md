@@ -8,12 +8,12 @@ Quelle für alles: `plan/posts.json` (Einträge mit `"tiktok"` in `channels`).
 Lesbar: `plan/PLAN.md`. Öffentlich abrufbar unter
 https://github.com/amanterbusiness-ai/mamafunke-social
 
-**Reels und die TikTok-API:** Sobald im Repository das Secret
-`TIKTOK_REFRESH_TOKEN` existiert (`gh secret list -R amanterbusiness-ai/mamafunke-social`),
-lädt GitHub Actions die Reels ab dem 13.10.2026 selbst hoch (siehe TIKTOK_API.md,
-Stichtag TIKTOK_API_AB in scripts/post.py). Reels mit Termin ab dem 13.10. hier
-auslassen, Slideshows weiter einplanen, sonst erscheinen sie doppelt.
-Fehlt das Secret, gilt der Ablauf unten unverändert für alles.
+**Reels und die TikTok-API:** Die API-Anbindung (TIKTOK_API.md) ist abgeschaltet
+(Stichtag TIKTOK_API_AB = 2099 in scripts/post.py). Alle TikTok-Posts, Reels und
+Slideshows, werden weiter hier im Browser eingeplant.
+
+**Uhrzeiten prüfen:** Vor jedem Planen in der Beitragsliste nachsehen, ob zur
+gewünschten Minute schon ein Beitrag geplant ist. Höchstens ein Beitrag pro Uhrzeit.
 
 ## Ablauf (für Claude oder ChatGPT gleich)
 
