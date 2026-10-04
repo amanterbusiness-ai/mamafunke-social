@@ -2356,5 +2356,52 @@
     "media": {
       "video": "media/reels/slide-42-schick.mp4"
     }
+  },
+  {
+    "id": "zentrale-2026-10-04-7",
+    "date": "2026-10-06",
+    "weekday": "Dienstag",
+    "time": "18:30",
+    "kind": "slide",
+    "channels": [
+      "instagram",
+      "facebook"
+    ],
+    "hook": "Für eine Mama mit wenig Luft",
+    "caption": "Für eine Mama mit wenig Luft Teil diesen Satz mit einer Mama, die ihn heute brauchen könnte. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil. #mamaalltag #mentalload #mamaleben #mamasein #momtok",
+    "quelle": "amanter Zentrale",
+    "media": {
+      "instagram": [
+        "media/zentrale/zentrale-2026-10-04-7/instagram-01.jpg",
+        "media/zentrale/zentrale-2026-10-04-7/instagram-02.jpg",
+        "media/zentrale/zentrale-2026-10-04-7/instagram-03.jpg"
+      ],
+      "tiktok": [
+        "media/zentrale/zentrale-2026-10-04-7/tiktok-01.jpg",
+        "media/zentrale/zentrale-2026-10-04-7/tiktok-02.jpg",
+        "media/zentrale/zentrale-2026-10-04-7/tiktok-03.jpg"
+      ]
+    }
+  },
+  {
+    "id": "zentrale-2026-10-04-7-reel",
+    "date": "2026-10-07",
+    "weekday": "Mittwoch",
+    "time": "09:30",
+    "kind": "reel",
+    "channels": [
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "hook": "Für eine Mama mit wenig Luft",
+    "caption": "Für eine Mama mit wenig Luft Teil diesen Satz mit einer Mama, die ihn heute brauchen könnte. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil. #mamaalltag #mentalload #mamaleben #mamasein #momtok",
+    "captions": {
+      "youtube": "Für eine Mama mit wenig Luft Teil diesen Satz mit einer Mama, die ihn heute brauchen könnte. MamaFunke: Affirmationen für Mütter, kostenlos, Link im Profil.\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "Für eine Mama mit wenig Luft #shorts",
+    "media": {
+      "video": "media/reels/zentrale-2026-10-04-7.mp4"
+    }
   }
 ]
