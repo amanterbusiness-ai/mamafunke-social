@@ -8,6 +8,12 @@ Quelle für alles: `plan/posts.json` (Einträge mit `"tiktok"` in `channels`).
 Lesbar: `plan/PLAN.md`. Öffentlich abrufbar unter
 https://github.com/amanterbusiness-ai/mamafunke-social
 
+**Reels und die TikTok-API:** Sobald im Repository das Secret
+`TIKTOK_REFRESH_TOKEN` existiert (`gh secret list -R amanterbusiness-ai/mamafunke-social`),
+lädt GitHub Actions die Reels selbst hoch (siehe TIKTOK_API.md). Dann hier
+**nur noch Slideshows** einplanen und Reels auslassen, sonst erscheinen sie doppelt.
+Fehlt das Secret, gilt der Ablauf unten unverändert für alles.
+
 ## Ablauf (für Claude oder ChatGPT gleich)
 
 1. In TikTok Studio unter **Beiträge** nachsehen, welche Posts schon geplant

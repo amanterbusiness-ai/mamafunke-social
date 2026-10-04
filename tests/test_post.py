@@ -52,3 +52,60 @@ def test_story_medium_video_oder_erstes_hochformatbild():
                                         "instagram": ["media/x/instagram-01.jpg"]}}
     assert post.story_medium(reel) == ("video_url", "media/videos/a.mp4")
     assert post.story_medium(slide) == ("image_url", "media/x/tiktok-01.jpg")
+
+
+def test_tiktok_api_nur_fuer_reels_mit_tiktok():
+    assert post.kanaele({"kind": "reel", "channels": ["tiktok", "youtube"]}) == ["tiktok", "youtube", "tiktok_api"]
+    assert post.kanaele({"kind": "slide", "channels": ["tiktok"]}) == ["tiktok"]
+    assert post.kanaele({"kind": "reel", "channels": ["youtube"]}) == ["youtube"]
+
+
+def test_tiktok_api_ohne_secrets_nicht_bereit(monkeypatch):
+    for name in ("TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET", "TIKTOK_REFRESH_TOKEN"):
+        monkeypatch.delenv(name, raising=False)
+    assert not post.READY["tiktok_api"]()
+    monkeypatch.setenv("TIKTOK_CLIENT_KEY", "k")
+    monkeypatch.setenv("TIKTOK_CLIENT_SECRET", "s")
+    assert not post.READY["tiktok_api"]()
+    monkeypatch.setenv("TIKTOK_REFRESH_TOKEN", "r")
+    assert post.READY["tiktok_api"]()
+
+
+def test_tiktok_teilstuecke():
+    mb = 1024 * 1024
+    assert post.tiktok_teile(3 * mb) == [(0, 3 * mb - 1)]
+    assert post.tiktok_teile(64 * mb) == [(0, 64 * mb - 1)]
+    teile = post.tiktok_teile(100 * mb)
+    assert teile[0][0] == 0 and teile[-1][1] == 100 * mb - 1
+    assert all(b - a + 1 == 10 * mb for a, b in teile[:-1])
+    assert 10 * mb <= teile[-1][1] - teile[-1][0] + 1 < 20 * mb
+    assert all(teile[i][1] + 1 == teile[i + 1][0] for i in range(len(teile) - 1))
+
+
+def test_tiktok_direct_post_angaben():
+    p = {"caption": "alle", "captions": {"tiktok": "nur tt"}, "ki": True}
+    info = post.tiktok_post_info(p, ["SELF_ONLY", "PUBLIC_TO_EVERYONE"])
+    assert info["title"] == "nur tt"
+    assert info["privacy_level"] == "PUBLIC_TO_EVERYONE"
+    assert info["is_aigc"] is True
+    assert info["brand_organic_toggle"] is True and info["brand_content_toggle"] is False
+    # Ungeprüfte App: TikTok erlaubt nur privat
+    assert post.tiktok_post_info({"caption": "x"}, ["SELF_ONLY"])["privacy_level"] == "SELF_ONLY"
+    assert post.tiktok_post_info({"caption": "x"}, ["SELF_ONLY"])["is_aigc"] is False
+
+
+def test_tiktok_modus_upload_ist_standard(monkeypatch):
+    monkeypatch.delenv("TIKTOK_MODUS", raising=False)
+    assert post.tiktok_modus() == "upload"
+    monkeypatch.setenv("TIKTOK_MODUS", "Direct")
+    assert post.tiktok_modus() == "direct"
+    monkeypatch.setenv("TIKTOK_MODUS", "quatsch")
+    assert post.tiktok_modus() == "upload"
+
+
+def test_tiktok_pkce_hex_sha256():
+    import hashlib
+    import tiktok_auth
+    verifier, challenge = tiktok_auth.pkce()
+    assert 43 <= len(verifier) <= 128
+    assert challenge == hashlib.sha256(verifier.encode()).hexdigest()

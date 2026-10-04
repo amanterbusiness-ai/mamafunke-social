@@ -1,15 +1,20 @@
-"""Veröffentlicht fällige Posts aus plan/posts.json auf Instagram (Feed und Story), Facebook und YouTube.
+"""Veröffentlicht fällige Posts aus plan/posts.json auf Instagram (Feed und Story), Facebook, YouTube
+und (sobald eingerichtet) TikTok.
 
 Läuft in GitHub Actions alle 30 Minuten. Ein Post ist fällig, sobald seine
 Uhrzeit (deutsche Zeit) erreicht ist. Erledigtes steht in state/posted.json,
 damit nichts doppelt erscheint; der Workflow committet die Datei zurück.
 
-TikTok wird hier nicht gepostet (siehe TIKTOK.md).
+TikTok: Slideshows plant weiterhin die Browser-Aufgabe (TIKTOK.md). Reels gehen über die
+Content Posting API (Kanal "tiktok_api", siehe TIKTOK_API.md), aber erst, wenn die
+TIKTOK_*-Secrets gesetzt sind. Bis dahin bleibt alles beim Browser.
 
 Kanäle ohne Zugangsdaten werden übersprungen, nicht als Fehler gewertet.
 Umgebungsvariablen (GitHub Secrets):
     META_PAGE_TOKEN, FB_PAGE_ID, IG_USER_ID (optional)
     YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
+    TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, TIKTOK_REFRESH_TOKEN
+    TIKTOK_MODUS  "upload" (Standard, Entwurf in der TikTok-App) oder "direct"
     MEDIA_BASE_URL  öffentlicher Pfad zum Repository-Inhalt (raw.githubusercontent.com/...)
 Aufruf lokal zum Testen: python scripts/post.py --dry-run
 """
@@ -36,7 +41,9 @@ GRAPH = f"https://graph.facebook.com/{os.environ.get('GRAPH_VERSION', 'v25.0')}"
 # Verspätete Posts (z. B. nach einem Ausfall) nur bis zu diesem Abstand nachholen,
 # damit nicht Tage später ein Schwall alter Posts erscheint.
 MAX_DELAY = timedelta(hours=10)
-CHANNELS = ("instagram", "facebook", "youtube", "story")
+CHANNELS = ("instagram", "facebook", "youtube", "story", "tiktok_api")
+TIKTOK = "https://open.tiktokapis.com/v2"
+MB = 1024 * 1024
 
 
 def env(name: str) -> str:
@@ -135,10 +142,13 @@ def post_instagram(post: dict) -> str:
 
 def kanaele(post: dict) -> list[str]:
     """Kanäle eines Posts. Jeder Instagram-Post erscheint zusätzlich als Story,
-    außer er hat "keine_story": true."""
+    außer er hat "keine_story": true. TikTok-Reels laufen zusätzlich über die API
+    (greift nur, wenn deren Secrets gesetzt sind, sonst bleibt der Kanal offen)."""
     liste = list(post["channels"])
     if "instagram" in liste and not post.get("keine_story"):
         liste.append("story")
+    if "tiktok" in liste and post.get("kind") == "reel":
+        liste.append("tiktok_api")
     return liste
 
 
@@ -195,13 +205,103 @@ def post_youtube(post: dict) -> str:
     return resp["id"]
 
 
+def tiktok_modus() -> str:
+    return "direct" if env("TIKTOK_MODUS").lower() == "direct" else "upload"
+
+
+def tiktok_teile(groesse: int) -> list[tuple[int, int]]:
+    """Byte-Bereiche für den Upload. TikTok nimmt bis 64 MB in einem Stück, sonst
+    Stücke von 5 bis 64 MB; das letzte Stück nimmt den Rest auf (bis 128 MB)."""
+    if groesse <= 64 * MB:
+        return [(0, groesse - 1)]
+    stueck = 10 * MB
+    anzahl = groesse // stueck
+    teile = [(i * stueck, (i + 1) * stueck - 1) for i in range(anzahl - 1)]
+    return teile + [((anzahl - 1) * stueck, groesse - 1)]
+
+
+def tiktok_post_info(post: dict, privacy_optionen: list[str]) -> dict:
+    """Angaben für Direct Post. Öffentlich, sobald TikTok es erlaubt (nach App-Prüfung),
+    sonst nur privat. Eigene App = Werbung für die eigene Marke."""
+    return {
+        "title": text(post, "tiktok"),
+        "privacy_level": "PUBLIC_TO_EVERYONE" if "PUBLIC_TO_EVERYONE" in privacy_optionen else "SELF_ONLY",
+        "disable_duet": False,
+        "disable_stitch": False,
+        "disable_comment": False,
+        "brand_organic_toggle": True,
+        "brand_content_toggle": False,
+        "is_aigc": bool(post.get("ki")),
+    }
+
+
+def tiktok(path: str, token: str, **body) -> dict:
+    r = requests.post(f"{TIKTOK}/{path}", json=body, timeout=120,
+                      headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=UTF-8"})
+    data = r.json()
+    if r.status_code >= 400 or data.get("error", {}).get("code", "ok") != "ok":
+        raise RuntimeError(f"TikTok {path}: {data.get('error', data)}")
+    return data.get("data", {})
+
+
+def tiktok_token() -> str:
+    """Access-Token (24 h gültig) aus dem Refresh-Token (365 Tage gültig)."""
+    r = requests.post(f"{TIKTOK}/oauth/token/", timeout=60, data={
+        "client_key": env("TIKTOK_CLIENT_KEY"), "client_secret": env("TIKTOK_CLIENT_SECRET"),
+        "grant_type": "refresh_token", "refresh_token": env("TIKTOK_REFRESH_TOKEN")})
+    data = r.json()
+    if "access_token" not in data:
+        raise RuntimeError(f"TikTok-Token: {data.get('error_description') or data.get('error') or r.status_code}")
+    if data.get("refresh_token") and data["refresh_token"] != env("TIKTOK_REFRESH_TOKEN"):
+        print("HINWEIS TikTok hat ein neues Refresh-Token ausgegeben: scripts/tiktok_auth.py erneut ausführen",
+              file=sys.stderr)
+    return data["access_token"]
+
+
+def post_tiktok(post: dict) -> str:
+    """Reel per Content Posting API. Upload-Modus: Entwurf landet im TikTok-Postfach,
+    Caption, KI-Kennzeichnung und Werbehinweis setzt die Gründerin dort. Direct Post:
+    erscheint sofort mit allen Angaben."""
+    if post["kind"] != "reel":
+        return "nicht zutreffend"
+    token = tiktok_token()
+    datei = ROOT / post["media"]["video"]
+    groesse = datei.stat().st_size
+    teile = tiktok_teile(groesse)
+    quelle = {"source": "FILE_UPLOAD", "video_size": groesse,
+              "chunk_size": teile[0][1] + 1, "total_chunk_count": len(teile)}
+    if tiktok_modus() == "direct":
+        optionen = tiktok("post/publish/creator_info/query/", token).get("privacy_level_options", [])
+        init = tiktok("post/publish/video/init/", token, post_info=tiktok_post_info(post, optionen),
+                      source_info=quelle)
+    else:
+        init = tiktok("post/publish/inbox/video/init/", token, source_info=quelle)
+    with datei.open("rb") as f:
+        for anfang, ende in teile:
+            f.seek(anfang)
+            r = requests.put(init["upload_url"], data=f.read(ende - anfang + 1), timeout=600, headers={
+                "Content-Type": "video/mp4", "Content-Range": f"bytes {anfang}-{ende}/{groesse}"})
+            if r.status_code >= 400:
+                raise RuntimeError(f"TikTok-Upload {anfang}-{ende}: {r.status_code} {r.text[:200]}")
+    for _ in range(60):
+        status = tiktok("post/publish/status/fetch/", token, publish_id=init["publish_id"])
+        if status.get("status") in ("SEND_TO_USER_INBOX", "PUBLISH_COMPLETE"):
+            return init["publish_id"]
+        if status.get("status") == "FAILED":
+            raise RuntimeError(f"TikTok-Verarbeitung: {status.get('fail_reason')}")
+        time.sleep(10)
+    raise RuntimeError("TikTok-Verarbeitung dauert zu lange")
+
+
 READY = {
     "instagram": lambda: env("META_PAGE_TOKEN") and (env("IG_USER_ID") or env("FB_PAGE_ID")),
     "facebook": lambda: env("META_PAGE_TOKEN") and env("FB_PAGE_ID"),
     "youtube": lambda: env("YT_REFRESH_TOKEN") and env("YT_CLIENT_ID") and env("YT_CLIENT_SECRET"),
+    "tiktok_api": lambda: env("TIKTOK_CLIENT_KEY") and env("TIKTOK_CLIENT_SECRET") and env("TIKTOK_REFRESH_TOKEN"),
 }
 READY["story"] = READY["instagram"]
-POSTERS = {"instagram": post_instagram, "facebook": post_facebook, "youtube": post_youtube, "story": post_story}
+POSTERS = {"instagram": post_instagram, "facebook": post_facebook, "youtube": post_youtube, "story": post_story,
+           "tiktok_api": post_tiktok}
 
 
 def check() -> int:
@@ -231,6 +331,11 @@ def check() -> int:
         print("YouTube: Zugang gültig")
     else:
         print("YouTube: noch nicht eingerichtet")
+    if READY["tiktok_api"]():
+        tiktok_token()  # wirft, wenn der Zugang nicht gilt
+        print(f"TikTok: Zugang gültig (Modus {tiktok_modus()})")
+    else:
+        print("TikTok-API: noch nicht eingerichtet (Reels weiter über den Browser)")
     return 0 if ok else 1
 
 
