@@ -348,9 +348,7 @@
     "time": "12:30",
     "kind": "slide",
     "channels": [
-      "tiktok",
-      "instagram",
-      "facebook"
+      "tiktok"
     ],
     "impulse": "mf-grenzen-001",
     "hook": "Nein sagen ist auch Fürsorge.",
@@ -410,9 +408,7 @@
     "time": "12:30",
     "kind": "slide",
     "channels": [
-      "tiktok",
-      "instagram",
-      "facebook"
+      "tiktok"
     ],
     "impulse": "mf-erschoepfung-001",
     "hook": "Für die Mama, die heute nur müde ist.",
@@ -485,9 +481,7 @@
     "time": "12:30",
     "kind": "slide",
     "channels": [
-      "tiktok",
-      "instagram",
-      "facebook"
+      "tiktok"
     ],
     "impulse": "mf-schuldgefuehle-003",
     "hook": "Wenn du heute laut geworden bist.",
@@ -547,9 +541,7 @@
     "time": "12:30",
     "kind": "slide",
     "channels": [
-      "tiktok",
-      "instagram",
-      "facebook"
+      "tiktok"
     ],
     "impulse": "mf-alleinerziehend-003",
     "hook": "Alleinerziehend heißt:",
@@ -609,9 +601,7 @@
     "time": "12:30",
     "kind": "slide",
     "channels": [
-      "tiktok",
-      "instagram",
-      "facebook"
+      "tiktok"
     ],
     "impulse": "mf-kleinkind-003",
     "hook": "Für die Mama eines Kleinkinds in deinem Leben.",
@@ -690,9 +680,7 @@
     "time": "12:30",
     "kind": "slide",
     "channels": [
-      "tiktok",
-      "instagram",
-      "facebook"
+      "tiktok"
     ],
     "impulse": "mf-schulkind-001",
     "hook": "Für Mamas von Schulkindern.",
@@ -2402,6 +2390,188 @@
     "yt_titel": "Für eine Mama mit wenig Luft #shorts",
     "media": {
       "video": "media/reels/zentrale-2026-10-04-7.mp4"
+    }
+  },
+  {
+    "id": "szene-s02-pov-2147",
+    "date": "2026-10-06",
+    "weekday": "Dienstag",
+    "time": "17:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-mental-load-014",
+    "hook": "POV: 21:47 Uhr. Du sitzt. Zum ersten Mal heute.",
+    "hook_type": "pov",
+    "caption": "Um wie viel Uhr sitzt du heute zum ersten Mal? Ehrlich. Videoszenen KI-generiert. #mamaalltag #mamaleben #mentalload #pov #momtok",
+    "media": {
+      "video": "media/szenen/reels/s02-pov-2147.mp4"
+    },
+    "captions": {
+      "youtube": "Um wie viel Uhr sitzt du heute zum ersten Mal? Ehrlich. Videoszenen KI-generiert. #mamaalltag #mamaleben #mentalload #pov #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "POV: 21:47 Uhr. Du sitzt. Zum ersten Mal heute. #shorts"
+  },
+  {
+    "id": "szene-s04-nichts-geschafft",
+    "date": "2026-10-07",
+    "weekday": "Mittwoch",
+    "time": "17:00",
+    "kind": "slide",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook"
+    ],
+    "impulse": "mf-mental-load-018",
+    "hook": "Du hast diese Woche „nichts geschafft“? Zähl mal mit.",
+    "hook_type": "liste",
+    "caption": "Speicher dir das für den nächsten Tag, an dem du denkst, du hast nichts geschafft. Was fehlt auf der Liste? Titelbild KI-generiert. #mentalload #mamaalltag #mamaleben #unsichtbarearbeit #momtok",
+    "media": {
+      "instagram": [
+        "media/szenen/s04-nichts-geschafft/instagram-01.jpg",
+        "media/szenen/s04-nichts-geschafft/instagram-02.jpg",
+        "media/szenen/s04-nichts-geschafft/instagram-03.jpg",
+        "media/szenen/s04-nichts-geschafft/instagram-04.jpg",
+        "media/szenen/s04-nichts-geschafft/instagram-05.jpg",
+        "media/szenen/s04-nichts-geschafft/instagram-06.jpg"
+      ],
+      "tiktok": [
+        "media/szenen/s04-nichts-geschafft/tiktok-01.jpg",
+        "media/szenen/s04-nichts-geschafft/tiktok-02.jpg",
+        "media/szenen/s04-nichts-geschafft/tiktok-03.jpg",
+        "media/szenen/s04-nichts-geschafft/tiktok-04.jpg",
+        "media/szenen/s04-nichts-geschafft/tiktok-05.jpg",
+        "media/szenen/s04-nichts-geschafft/tiktok-06.jpg"
+      ],
+      "tiktok_video": "media/szenen/s04-nichts-geschafft/tiktok.mp4"
+    }
+  },
+  {
+    "id": "szene-s01-kopf-waesche",
+    "date": "2026-10-08",
+    "weekday": "Donnerstag",
+    "time": "17:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-mental-load-017",
+    "hook": "Ich falte Wäsche. Mein Kopf:",
+    "hook_type": "gedanken",
+    "caption": "Mein Kopf beim Wäschefalten. Was steht bei dir gerade ganz oben auf der Liste? Videoszenen KI-generiert. #mentalload #mamaalltag #mamaleben #mamasein #momtok",
+    "media": {
+      "video": "media/szenen/reels/s01-kopf-waesche.mp4"
+    },
+    "captions": {
+      "youtube": "Mein Kopf beim Wäschefalten. Was steht bei dir gerade ganz oben auf der Liste? Videoszenen KI-generiert. #mentalload #mamaalltag #mamaleben #mamasein #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "Ich falte Wäsche. Mein Kopf: #shorts"
+  },
+  {
+    "id": "szene-s06-partner",
+    "date": "2026-10-09",
+    "weekday": "Freitag",
+    "time": "17:00",
+    "kind": "slide",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook"
+    ],
+    "impulse": "mf-partnerschaft-011",
+    "hook": "Schick das deinem Partner. Ohne Kommentar.",
+    "hook_type": "schick_ihr_das",
+    "caption": "Schick es weiter. Ohne Kommentar. Titelbild KI-generiert. #mentalload #equalcare #mamaalltag #elternsein #momtok",
+    "media": {
+      "instagram": [
+        "media/szenen/s06-partner/instagram-01.jpg",
+        "media/szenen/s06-partner/instagram-02.jpg",
+        "media/szenen/s06-partner/instagram-03.jpg",
+        "media/szenen/s06-partner/instagram-04.jpg",
+        "media/szenen/s06-partner/instagram-05.jpg",
+        "media/szenen/s06-partner/instagram-06.jpg"
+      ],
+      "tiktok": [
+        "media/szenen/s06-partner/tiktok-01.jpg",
+        "media/szenen/s06-partner/tiktok-02.jpg",
+        "media/szenen/s06-partner/tiktok-03.jpg",
+        "media/szenen/s06-partner/tiktok-04.jpg",
+        "media/szenen/s06-partner/tiktok-05.jpg",
+        "media/szenen/s06-partner/tiktok-06.jpg"
+      ],
+      "tiktok_video": "media/szenen/s06-partner/tiktok.mp4"
+    }
+  },
+  {
+    "id": "szene-s03-schuhe",
+    "date": "2026-10-10",
+    "weekday": "Samstag",
+    "time": "17:00",
+    "kind": "slide",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook"
+    ],
+    "impulse": "mf-mental-load-009",
+    "hook": "Diese Schuhe stehen seit Montag im Flur.",
+    "hook_type": "gegenstand",
+    "caption": "Welcher Gegenstand liegt bei euch rum, den nur du siehst? Bilder KI-generiert. #mentalload #mamaalltag #mamaleben #familienalltag #momtok",
+    "media": {
+      "instagram": [
+        "media/szenen/s03-schuhe/instagram-01.jpg",
+        "media/szenen/s03-schuhe/instagram-02.jpg",
+        "media/szenen/s03-schuhe/instagram-03.jpg",
+        "media/szenen/s03-schuhe/instagram-04.jpg",
+        "media/szenen/s03-schuhe/instagram-05.jpg"
+      ],
+      "tiktok": [
+        "media/szenen/s03-schuhe/tiktok-01.jpg",
+        "media/szenen/s03-schuhe/tiktok-02.jpg",
+        "media/szenen/s03-schuhe/tiktok-03.jpg",
+        "media/szenen/s03-schuhe/tiktok-04.jpg",
+        "media/szenen/s03-schuhe/tiktok-05.jpg"
+      ],
+      "tiktok_video": "media/szenen/s03-schuhe/tiktok.mp4"
+    }
+  },
+  {
+    "id": "szene-s05-homescreen",
+    "date": "2026-10-11",
+    "weekday": "Sonntag",
+    "time": "17:00",
+    "kind": "slide",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook"
+    ],
+    "impulse": "mf-mental-load-011",
+    "hook": "Die einzige App auf meinem Homescreen, die nichts von mir will.",
+    "hook_type": "homescreen",
+    "caption": "Was ist bei dir auf dem Homescreen? Ehrlich. Das Widget ist MamaFunke, kostenlos, Link im Profil. Titelbild KI-generiert. #homescreen #widget #mamaalltag #mamaleben #momtok",
+    "media": {
+      "instagram": [
+        "media/szenen/s05-homescreen/instagram-01.jpg",
+        "media/szenen/s05-homescreen/instagram-02.jpg",
+        "media/szenen/s05-homescreen/instagram-03.jpg",
+        "media/szenen/s05-homescreen/instagram-04.jpg"
+      ],
+      "tiktok": [
+        "media/szenen/s05-homescreen/tiktok-01.jpg",
+        "media/szenen/s05-homescreen/tiktok-02.jpg",
+        "media/szenen/s05-homescreen/tiktok-03.jpg",
+        "media/szenen/s05-homescreen/tiktok-04.jpg"
+      ],
+      "tiktok_video": "media/szenen/s05-homescreen/tiktok.mp4"
     }
   }
 ]
