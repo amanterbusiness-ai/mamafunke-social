@@ -957,7 +957,27 @@
     "time": "17:00",
     "kind": "reel",
     "channels": [
-      "tiktok",
+      "tiktok"
+    ],
+    "impulse": "mf-mental-load-014",
+    "hook": "POV: 21:47 Uhr. Du sitzt. Zum ersten Mal heute.",
+    "hook_type": "pov",
+    "caption": "Um wie viel Uhr sitzt du heute zum ersten Mal? Ehrlich. Videoszenen KI-generiert. #mamaalltag #mamaleben #mentalload #pov #momtok",
+    "media": {
+      "video": "media/szenen/reels/s02-pov-2147.mp4"
+    },
+    "captions": {
+      "youtube": "Um wie viel Uhr sitzt du heute zum ersten Mal? Ehrlich. Videoszenen KI-generiert. #mamaalltag #mamaleben #mentalload #pov #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "POV: 21:47 Uhr. Du sitzt. Zum ersten Mal heute. #shorts"
+  },
+  {
+    "id": "szene-s02-pov-2147-abend",
+    "date": "2026-10-06",
+    "weekday": "Dienstag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
       "instagram",
       "facebook",
       "youtube"
@@ -978,7 +998,7 @@
     "id": "szene-s04-nichts-geschafft",
     "date": "2026-10-07",
     "weekday": "Mittwoch",
-    "time": "17:00",
+    "time": "08:00",
     "kind": "slide",
     "channels": [
       "tiktok",
@@ -1016,7 +1036,27 @@
     "time": "17:00",
     "kind": "reel",
     "channels": [
-      "tiktok",
+      "tiktok"
+    ],
+    "impulse": "mf-mental-load-017",
+    "hook": "Ich falte Wäsche. Mein Kopf:",
+    "hook_type": "gedanken",
+    "caption": "Mein Kopf beim Wäschefalten. Was steht bei dir gerade ganz oben auf der Liste? Videoszenen KI-generiert. #mentalload #mamaalltag #mamaleben #mamasein #momtok",
+    "media": {
+      "video": "media/szenen/reels/s01-kopf-waesche.mp4"
+    },
+    "captions": {
+      "youtube": "Mein Kopf beim Wäschefalten. Was steht bei dir gerade ganz oben auf der Liste? Videoszenen KI-generiert. #mentalload #mamaalltag #mamaleben #mamasein #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "Ich falte Wäsche. Mein Kopf: #shorts"
+  },
+  {
+    "id": "szene-s01-kopf-waesche-abend",
+    "date": "2026-10-08",
+    "weekday": "Donnerstag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
       "instagram",
       "facebook",
       "youtube"
@@ -1037,7 +1077,7 @@
     "id": "szene-s06-partner",
     "date": "2026-10-09",
     "weekday": "Freitag",
-    "time": "17:00",
+    "time": "08:00",
     "kind": "slide",
     "channels": [
       "tiktok",
@@ -1072,7 +1112,7 @@
     "id": "szene-s03-schuhe",
     "date": "2026-10-10",
     "weekday": "Samstag",
-    "time": "17:00",
+    "time": "08:00",
     "kind": "slide",
     "channels": [
       "tiktok",
@@ -1105,7 +1145,7 @@
     "id": "szene-s05-homescreen",
     "date": "2026-10-11",
     "weekday": "Sonntag",
-    "time": "17:00",
+    "time": "08:00",
     "kind": "slide",
     "channels": [
       "tiktok",
@@ -1136,7 +1176,7 @@
     "id": "szene-s08-brote-2340",
     "date": "2026-10-12",
     "weekday": "Montag",
-    "time": "17:00",
+    "time": "19:00",
     "kind": "reel",
     "channels": [
       "tiktok",
@@ -1160,7 +1200,7 @@
     "id": "szene-s10-nur-ich-weiss",
     "date": "2026-10-13",
     "weekday": "Dienstag",
-    "time": "17:00",
+    "time": "08:00",
     "kind": "slide",
     "channels": [
       "tiktok",
@@ -1193,7 +1233,7 @@
     "id": "szene-s07-auto-kita",
     "date": "2026-10-14",
     "weekday": "Mittwoch",
-    "time": "17:00",
+    "time": "19:00",
     "kind": "reel",
     "channels": [
       "tiktok",
@@ -1217,7 +1257,7 @@
     "id": "szene-s14-was-ich-denke",
     "date": "2026-10-15",
     "weekday": "Donnerstag",
-    "time": "17:00",
+    "time": "08:00",
     "kind": "slide",
     "channels": [
       "tiktok",
@@ -1252,7 +1292,7 @@
     "id": "szene-s11-tuerrahmen",
     "date": "2026-10-16",
     "weekday": "Freitag",
-    "time": "17:00",
+    "time": "19:00",
     "kind": "reel",
     "channels": [
       "tiktok",
@@ -1276,7 +1316,7 @@
     "id": "szene-s09-aufgeraeumt",
     "date": "2026-10-17",
     "weekday": "Samstag",
-    "time": "17:00",
+    "time": "08:00",
     "kind": "slide",
     "channels": [
       "tiktok",
@@ -1309,7 +1349,7 @@
     "id": "szene-s13-0604",
     "date": "2026-10-18",
     "weekday": "Sonntag",
-    "time": "17:00",
+    "time": "19:00",
     "kind": "reel",
     "channels": [
       "tiktok",
@@ -1333,7 +1373,7 @@
     "id": "szene-s12-alles-gut",
     "date": "2026-10-19",
     "weekday": "Montag",
-    "time": "17:00",
+    "time": "08:00",
     "kind": "slide",
     "channels": [
       "tiktok",
@@ -1368,7 +1408,7 @@
     "id": "szene-s15-spaziergang",
     "date": "2026-10-20",
     "weekday": "Dienstag",
-    "time": "17:00",
+    "time": "19:00",
     "kind": "reel",
     "channels": [
       "tiktok",
@@ -1387,5 +1427,30 @@
       "youtube": "Wo fragt dich keiner was? Videoszenen KI-generiert. #mamaalltag #mamaleben #babyzeit #metime #momtok\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "Der einzige Ort, an dem mich keiner was fragt. #shorts"
+  },
+  {
+    "id": "szene-s18-papa-stimme",
+    "date": "2026-10-09",
+    "weekday": "Freitag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-selbstmitgefuehl-015",
+    "hook": "Papas, kurz ehrlich:",
+    "hook_type": "papa",
+    "ki": true,
+    "caption": "Mamas: Schickt das eurem Mann. Ohne Kommentar. Stimme und Szenen KI-generiert. #mentalload #papasein #mamaalltag #elternsein #momtok",
+    "media": {
+      "video": "media/szenen/reels/s18-papa-stimme.mp4"
+    },
+    "yt_titel": "Papas, kurz ehrlich #shorts",
+    "captions": {
+      "youtube": "Mamas: Schickt das eurem Mann. Ohne Kommentar. Stimme und Szenen KI-generiert. #mentalload #papasein #mamaalltag #elternsein #momtok\nKostenlos laden: mamafunke.de/yt"
+    }
   }
 ]
