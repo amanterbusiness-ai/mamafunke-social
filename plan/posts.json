@@ -973,8 +973,8 @@
   },
   {
     "id": "szene-s02-pov-2147-abend",
-    "date": "2026-10-06",
-    "weekday": "Dienstag",
+    "date": "2026-10-07",
+    "weekday": "Mittwoch",
     "time": "19:00",
     "kind": "reel",
     "channels": [
@@ -993,6 +993,31 @@
       "youtube": "Um wie viel Uhr sitzt du heute zum ersten Mal? Ehrlich. Videoszenen KI-generiert. #mamaalltag #mamaleben #mentalload #pov #momtok\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "POV: 21:47 Uhr. Du sitzt. Zum ersten Mal heute. #shorts"
+  },
+  {
+    "id": "szene-v07-app-demo",
+    "date": "2026-10-06",
+    "weekday": "Dienstag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-mental-load-014",
+    "hook": "23:40 Uhr. Die Brote für morgen.",
+    "hook_type": "szene",
+    "ki": true,
+    "caption": "Was fehlt dir gerade am meisten: Ruhe, Schlaf oder einfach fünf Minuten für dich? MamaFunke: Sätze, die genau zu dir passen. Kostenlos, Link im Profil oder mamafunke.de. Stimme und Szenen KI-generiert. #mamaalltag #mentalload #mamaleben #affirmationen #momtok",
+    "media": {
+      "video": "media/szenen/reels/v07-app-demo.mp4"
+    },
+    "yt_titel": "23:40 Uhr. Die Brote für morgen. #shorts",
+    "captions": {
+      "youtube": "Was fehlt dir gerade am meisten: Ruhe, Schlaf oder einfach fünf Minuten für dich? MamaFunke: Sätze, die genau zu dir passen. Kostenlos, mamafunke.de. Stimme und Szenen KI-generiert. #mamaalltag #mentalload #mamaleben #affirmationen #momtok\nKostenlos laden: mamafunke.de/yt"
+    }
   },
   {
     "id": "szene-s04-nichts-geschafft",
