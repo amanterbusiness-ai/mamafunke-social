@@ -28,9 +28,10 @@ UHRZEITEN = ("09:00", "20:00")
 W, H = 1000, 1500
 
 # Suchbegriffe laut Keyword-Analyse 07.10.2026 (Google DACH): sprüche für mütter 11.260,
-# mama sprüche 4.290, mental load 11.780, spruch des tages 44.700.
+# mama sprüche 4.290, spruch des tages 44.700. "mental load" bewusst nicht: dort suchen Leute
+# Planer und Infografiken, keine Sprüche.
 THEMA = {
-    "mental-load": ("Mental Load Sprüche für Mütter", "Mental Load"),
+    "mental-load": ("Sprüche für Mütter mit vollem Kopf", "Voller Kopf"),
     "selbstmitgefuehl": ("Sprüche für Mütter, die sich selbst zu streng sind", "Selbstmitgefühl"),
     "ueberreizung": ("Mama Sprüche für Tage, an denen alles zu laut ist", "Überreizung"),
     "schuldgefuehle": ("Sprüche gegen das schlechte Gewissen als Mama", "Schlechtes Gewissen"),
@@ -136,7 +137,7 @@ def main() -> None:
                 f"„{x['textDe']}“ Ehrliche Sprüche für Mütter, ohne Kitsch und ohne Leistungsdruck. "
                 f"Thema: {etikett}. "
                 "Mehr Mama Sprüche in der kostenlosen App MamaFunke, mit Spruch des Tages als Widget. "
-                "#sprüchefürmütter #mamasprüche #mentalload #mamaalltag #mamaleben"
+                "#sprüchefürmütter #mamasprüche #muttersein #mamaalltag #mamaleben"
             )[:500],
             "bild": f"https://mamafunke.de/pins/img/{x['id']}.jpg",
             "link": "https://mamafunke.de/pin",
