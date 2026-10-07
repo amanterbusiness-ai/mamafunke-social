@@ -61,7 +61,7 @@
   var APPLE_PROVIDER = '';     // Provider-Token aus App Store Connect, Kampagnen
   var PAKET = 'de.mamafunke.app';
 
-  var erlaubt = ['ig', 'tt', 'yt', 'fb', 'forum', 'pin', 'web', 'creator', 'teilen'];
+  var erlaubt = ['ig', 'tt', 'yt', 'fb', 'forum', 'pin', 'web', 'creator', 'teilen', 'wa'];
   // Kanal aus ?k=ig oder aus dem Kurzlink mamafunke.de/ig
   var pfad = location.pathname.split('/').filter(Boolean)[0] || '';
   var k = (new URLSearchParams(location.search).get('k') || pfad || 'web').toLowerCase();

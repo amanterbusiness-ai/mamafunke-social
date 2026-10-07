@@ -7,7 +7,7 @@ einmal ausführen: python scripts/kurzlinks.py
 
 from pathlib import Path
 
-KANAELE = ["ig", "tt", "yt", "fb", "forum", "pin", "creator", "teilen"]
+KANAELE = ["ig", "tt", "yt", "fb", "forum", "pin", "creator", "teilen", "wa"]
 DOCS = Path(__file__).resolve().parent.parent / "docs"
 
 if __name__ == "__main__":
