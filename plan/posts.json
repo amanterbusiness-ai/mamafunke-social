@@ -1477,5 +1477,79 @@
     "captions": {
       "youtube": "Mamas: Schickt das eurem Mann. Ohne Kommentar. Stimme und Szenen KI-generiert. #mentalload #papasein #mamaalltag #elternsein #momtok\nKostenlos laden: mamafunke.de/yt"
     }
+  },
+  {
+    "id": "szene-v08-kita-job",
+    "date": "2026-10-21",
+    "weekday": "Mittwoch",
+    "time": "20:15",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-beruf-015",
+    "hook": "16:52 Uhr. Kita schließt um fünf.",
+    "hook_type": "pov",
+    "ki": true,
+    "caption": "Um wie viel Uhr schließt eure Kita, und wie oft war es knapp? 🙈\n\nLetzte Mail, Chefin will „kurz“ was, rote Ampel. Und im Büro heißt es dann: „Die geht immer so früh.“ Du darfst pünktlich gehen.\n\nWie voll ist dein Kopf gerade? Der Mental-Load-Test: mamafunke.de/test\nMamaFunke kostenlos laden, Link im Profil oder mamafunke.de\n\nDie Alltagsszenen sind KI-generiert.\n\n#workingmom #mamaalltag #vereinbarkeit #mentalload #mamaleben",
+    "captions": {
+      "youtube": "Um wie viel Uhr schließt eure Kita, und wie oft war es knapp?\n\nLetzte Mail, Chefin will „kurz“ was, rote Ampel. Und im Büro heißt es dann: „Die geht immer so früh.“ Du darfst pünktlich gehen.\n\nMental-Load-Test: mamafunke.de/test\nKostenlos laden: mamafunke.de/yt\n\nDie Alltagsszenen sind KI-generiert."
+    },
+    "yt_titel": "16:52 Uhr. Kita schließt um fünf. #shorts",
+    "media": {
+      "video": "media/videos/v08-kita-job.mp4"
+    }
+  },
+  {
+    "id": "video-09-grenzen",
+    "date": "2026-10-22",
+    "weekday": "Donnerstag",
+    "time": "20:15",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-grenzen-011",
+    "hook": "21:30. Das Handy vibriert.",
+    "hook_type": "pov",
+    "ki": true,
+    "caption": "Wie viele „Kannst du kurz?“ hattest du heute? Schreib die Zahl in die Kommentare.\n\nElternchat, Nachbarin, Mama. Und du tippst schon: „Klar, mach ich!“ Stopp. Du darfst später antworten.\n\nSchreib uns, was dich heute belastet. Wir schicken dir deinen Satz.\nMamaFunke kostenlos laden, Link im Profil oder mamafunke.de\n\nDie Stimme ist KI-generiert.\n\n#grenzensetzen #mamaalltag #neinsagen #mentalload #mamaleben",
+    "captions": {
+      "youtube": "Wie viele „Kannst du kurz?“ hattest du heute?\n\nElternchat, Nachbarin, Mama. Und du tippst schon: „Klar, mach ich!“ Stopp. Du darfst später antworten.\n\nSchreib uns, was dich heute belastet. Wir schicken dir deinen Satz.\nKostenlos laden: mamafunke.de/yt\n\nDie Stimme ist KI-generiert."
+    },
+    "yt_titel": "21:30. Das Handy vibriert. Grenzen als Mama #shorts",
+    "media": {
+      "video": "media/videos/v09-grenzen.mp4"
+    }
+  },
+  {
+    "id": "szene-v10-partner",
+    "date": "2026-10-23",
+    "weekday": "Freitag",
+    "time": "20:15",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-partnerschaft-014",
+    "hook": "Er: „Sag doch, wenn ich helfen soll.“",
+    "hook_type": "gedanken",
+    "caption": "Welcher Tab ist bei dir gerade offen? Schreib ihn in die Kommentare 👇\n\nImpfpass, Winterjacke, Kita-Fotos, Kuchen für Freitag. Und ganz unten: ihm sagen, was ansteht. Sagen ist auch Arbeit. Schick das deinem Partner.\n\nGratis-Karten mit Sätzen für dich: mamafunke.de/karten\nMamaFunke kostenlos laden, Link im Profil oder mamafunke.de\n\n#mentalload #partnerschaft #mamaalltag #mamaleben #gleichberechtigung",
+    "captions": {
+      "youtube": "Welcher Tab ist bei dir gerade offen?\n\nImpfpass, Winterjacke, Kita-Fotos, Kuchen für Freitag. Und ganz unten: ihm sagen, was ansteht. Sagen ist auch Arbeit. Schick das deinem Partner.\n\nGratis-Karten: mamafunke.de/karten\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "Er: Sag doch, wenn ich helfen soll. Mental Load #shorts",
+    "media": {
+      "video": "media/videos/v10-partner.mp4"
+    }
   }
 ]
