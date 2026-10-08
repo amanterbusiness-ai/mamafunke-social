@@ -279,5 +279,15 @@
   <a href="/ratgeber/">Alle Ratgeber</a> · <a href="/">MamaFunke</a>
 </footer>
 </div>
+<script>
+// Kommt jemand über einen Kanal-Link (z. B. ?k=pin), zählt der App-Knopf für diesen Kanal.
+(function () {
+  var k = new URLSearchParams(location.search).get("k") || "";
+  if (!/^(pin|ig|tt|fb|yt|wa)$/.test(k)) return;
+  document.querySelectorAll("a.cta").forEach(function (a) {
+    if (a.getAttribute("href").indexOf("/teilen") > -1) a.setAttribute("href", "/" + k);
+  });
+})();
+</script>
 </body>
 </html>

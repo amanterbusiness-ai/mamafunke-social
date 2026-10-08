@@ -359,7 +359,7 @@ footer a { color: var(--leise); }
     var speichern = el("a", { class: "knopf zweit breit", id: "speichern", download: "mamafunke-test-" + r.tabs + "-tabs.png", href: "#" }, ["Bild speichern"]);
     var teilen = null;
     if (navigator.canShare && typeof File !== "undefined") {
-      teilen = el("button", { type: "button", class: "knopf breit", id: "teilen", onclick: teileBild }, ["Teilen"]);
+      teilen = el("button", { type: "button", class: "knopf zweit breit", id: "teilen", onclick: teileBild }, ["Bild teilen"]);
     }
     var wa = "https://wa.me/?text=" + encodeURIComponent("Ich habe den Mental-Load-Test gemacht: Mein Kopf hat gerade " + r.tabs + " Tabs offen. Wie viele sind es bei dir? " + URL_TEST);
 
@@ -376,6 +376,7 @@ footer a { color: var(--leise); }
       el("span", { class: "stufe", text: r.stufe.name }),
       el("p", { class: "text", text: r.stufe.text }),
       el("div", { class: "satz" }, [el("p", { class: "label", text: "Dein Satz für heute" }), el("blockquote", { text: r.impuls.s })]),
+      el("p", {}, [el("a", { class: "knopf breit", href: wa, target: "_blank", rel: "noopener" }, ["Wie viele Tabs hat deine Freundin? Test per WhatsApp schicken"])]),
       el("div", { class: "karte" }, [
         el("h2", { text: "Deine Karte zum Teilen" }),
         el("div", { class: "formate", role: "group", "aria-label": "Format der Karte" }, [
@@ -384,16 +385,16 @@ footer a { color: var(--leise); }
         ]),
         vorschau,
         el("div", { class: "aktionen" }, [
+          el("a", { class: "knopf breit", href: wa, target: "_blank", rel: "noopener" }, ["Per WhatsApp einer Mama schicken"]),
           teilen, speichern,
-          el("button", { type: "button", class: "knopf zweit breit", onclick: kopiereLink }, ["Link kopieren"]),
-          el("a", { class: "knopf zweit breit", href: wa, target: "_blank", rel: "noopener" }, ["Einer Mama schicken"])
+          el("button", { type: "button", class: "knopf zweit breit", onclick: kopiereLink }, ["Link kopieren"])
         ]),
         meldung
       ]),
       el("div", { class: "app" }, [
         el("img", { src: "icon.png", alt: "", width: "64", height: "64" }),
         el("div", { class: "inhalt" }, [
-          el("p", { text: "Ein Satz am Tag, direkt auf deinem Startbildschirm: MamaFunke, kostenlos, ohne Konto, ohne Werbung." }),
+          el("p", { text: "MamaFunke: 260 ehrliche Sätze für Mütter zum Durchwischen, einer davon als Widget auf deinem Startbildschirm. Kostenlos, ohne Konto, ohne Werbung." }),
           el("a", { class: "knopf", href: "https://mamafunke.de/teilen" }, ["App laden"])
         ])
       ]),

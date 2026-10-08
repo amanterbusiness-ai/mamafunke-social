@@ -49,6 +49,14 @@ THEMA = {
 CREME, TINTE, GOLD, GRAU = (251, 246, 238), (36, 31, 28), (180, 125, 34), (110, 103, 96)
 
 
+# Abschnitt der Sammlung /ratgeber/sprueche-fuer-muetter/, auf den ein Pin je Thema zeigt.
+# Pinterest bevorzugt Pins, die auf echte Inhalte statt auf Weiterleitungen in den Store führen.
+ANKER = {
+    "mf-schuldgefuehle": "schuld", "mf-grenzen": "grenzen", "mf-babyzeit": "baby",
+    "mf-beruf": "beruf", "mf-mental-load": "mentalload", "mf-erschoepfung": "muede",
+    "mf-schulkind": "schulkind", "mf-alleinerziehend": "allein", "mf-kleinkind": "kleinkind",
+}
+
 def font(name: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONTS / name), size)
 
@@ -140,7 +148,7 @@ def main() -> None:
                 "#sprüchefürmütter #mamasprüche #muttersein #mamaalltag #mamaleben"
             )[:500],
             "bild": f"https://mamafunke.de/pins/img/{x['id']}.jpg",
-            "link": "https://mamafunke.de/pin",
+            "link": f"https://mamafunke.de/ratgeber/sprueche-fuer-muetter/?k=pin#{ANKER.get(x['id'].rsplit('-', 1)[0], 'kurz')}",
         })
     QUEUE.parent.mkdir(exist_ok=True)
     QUEUE.write_text(json.dumps(queue, ensure_ascii=False, indent=1), encoding="utf-8")
