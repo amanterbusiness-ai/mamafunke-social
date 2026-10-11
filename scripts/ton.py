@@ -1,7 +1,7 @@
 """Bringt alle Videos auf Social-Media-Lautheit (-14 LUFS).
 
 Stumme Videos bekommen vorher eine ruhige Musik aus den eigenen
-Soundtracks (C:\\dev\\mama-app\\videos\\*\\assets). Das Bild wird nicht neu
+Soundtracks (/Volumes/Projekte/AKTIV/mama-app/videos/*/assets). Das Bild wird nicht neu
 kodiert. Aufruf: python scripts/ton.py [dateien...]  (ohne Argumente: alle
 Videos unter media/videos und media/reels).
 """
@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MUSIK_ORDNER = Path(r"C:\dev\mama-app\videos")
+MUSIK_ORDNER = Path(r"/Volumes/Projekte/AKTIV/mama-app/videos")
 MUSIK = ["v03-alltag", "v01b-tabs", "v04-schlaf", "v05-schuld", "v01-tabs"]
 ZIEL_LUFS = -14.0
 TOLERANZ = 1.0

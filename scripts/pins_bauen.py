@@ -18,7 +18,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
-APP = Path(r"C:\dev\mama-app\app")
+APP = Path(r"/Volumes/Projekte/AKTIV/mama-app/app")
 FONTS = APP / "assets" / "google_fonts"
 IMPULSE = APP / "assets" / "content" / "mamafunke_impulses.json"
 BILDER = ROOT / "docs" / "pins" / "img"
