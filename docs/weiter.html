@@ -52,8 +52,9 @@
 </main>
 <script>
   // Diese Seite setzt keine Cookies und lädt nichts nach. Sie gibt nur weiter,
-  // von welchem Kanal der Besuch kam (mamafunke.de/ig, /tt, /yt, /fb, /forum), damit die
-  // Stores Installationen pro Kanal zählen können.
+  // von welchem Kanal (mamafunke.de/ig, /tt, /yt, /fb, /forum) oder von welcher eigenen
+  // Seite (?s=ratgeber-...) der Besuch kam, damit die Stores Installationen pro Herkunft
+  // zählen können.
   var APP_ID_APPLE = '6817131358';
   // Erst auf true setzen, wenn die App im App Store öffentlich ist
   // (https://itunes.apple.com/lookup?id=6817131358&country=de liefert dann ein Ergebnis).
@@ -61,18 +62,42 @@
   var APPLE_PROVIDER = '';     // Provider-Token aus App Store Connect, Kampagnen
   var PAKET = 'de.mamafunke.app';
 
-  var erlaubt = ['ig', 'tt', 'yt', 'fb', 'forum', 'pin', 'web', 'creator', 'teilen', 'wa'];
-  // Kanal aus ?k=ig oder aus dem Kurzlink mamafunke.de/ig
-  var pfad = location.pathname.split('/').filter(Boolean)[0] || '';
-  var k = (new URLSearchParams(location.search).get('k') || pfad || 'web').toLowerCase();
-  if (erlaubt.indexOf(k) < 0) k = 'web';
+  var kanaele = ['ig', 'tt', 'yt', 'fb', 'forum', 'pin', 'creator', 'wa'];
+  var frage = new URLSearchParams(location.search);
+  var pfad = (location.pathname.split('/').filter(Boolean)[0] || '').toLowerCase();
 
-  var referrer = 'utm_source=' + k + '&utm_medium=bio&utm_campaign=social';
+  // Vorherige Seite, nur wenn sie zu dieser Website gehört. Genutzt werden nur Pfad und ?k=.
+  var vor = null;
+  try { if (document.referrer) vor = new URL(document.referrer); } catch (e) { vor = null; }
+  if (vor && vor.hostname !== location.hostname) vor = null;
+  var vorTeile = vor ? vor.pathname.toLowerCase().replace(/\.html$/, '').split('/').filter(Boolean) : [];
+  if (kanaele.concat(['teilen', 'weiter']).indexOf(vorTeile[0]) > -1) vor = null;
+
+  // Kanal aus ?k=ig, aus dem Kurzlink mamafunke.de/ig oder aus ?k= der vorherigen Seite
+  var k = '';
+  [frage.get('k'), pfad, vor ? new URLSearchParams(vor.search).get('k') : ''].forEach(function (x) {
+    x = (x || '').toLowerCase();
+    if (!k && kanaele.indexOf(x) > -1) k = x;
+  });
+
+  // Inhaltsseite aus ?s=ratgeber-..., sonst aus dem Pfad der vorherigen Seite (Startseite: start)
+  var s = (frage.get('s') || '').toLowerCase();
+  if (!s && vor) s = vorTeile.join('-') || 'start';
+  if (!/^[a-z0-9-]{1,60}$/.test(s)) s = '';
+
+  var quelle, medium, kampagne;
+  if (s) { quelle = k || 'web'; medium = 'seite'; kampagne = s; }
+  else if (k) { quelle = k; medium = 'bio'; kampagne = 'social'; }
+  // mamafunke.de/teilen ohne Vorseite: der Empfehlungslink aus der App
+  else if (pfad === 'teilen') { quelle = 'teilen'; medium = 'bio'; kampagne = 'social'; }
+  else { quelle = 'direkt'; medium = 'direkt'; kampagne = 'unbekannt'; }
+
+  var referrer = 'utm_source=' + quelle + '&utm_medium=' + medium + '&utm_campaign=' + kampagne;
   var play = 'https://play.google.com/store/apps/details?id=' + PAKET +
     '&referrer=' + encodeURIComponent(referrer);
   var apple = APP_ID_APPLE && APPLE_LIVE
     ? 'https://apps.apple.com/de/app/id' + APP_ID_APPLE +
-      (APPLE_PROVIDER ? '?pt=' + APPLE_PROVIDER + '&ct=' + k + '&mt=8' : '')
+      (APPLE_PROVIDER ? '?pt=' + APPLE_PROVIDER + '&ct=' + (quelle + '_' + kampagne).slice(0, 40) + '&mt=8' : '')
     : '';
 
   document.getElementById('play').href = play;

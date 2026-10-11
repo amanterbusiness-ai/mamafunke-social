@@ -268,7 +268,7 @@
 <div class="box">
   <h2>Noch mehr ehrliche Sätze, direkt auf dem Handy</h2>
   <p>MamaFunke hat 260 solcher Sätze zu 13 Themen, von Babyzeit bis Wiedereinstieg. Wisch durch, so viele du brauchst, speichere Favoriten und leg dir einen Satz als Widget auf den Startbildschirm. Kostenlos, ohne Konto und ohne Werbung. Für Android gibt es MamaFunke bei Google Play.</p>
-  <p><a class="cta" href="https://mamafunke.de/teilen">MamaFunke kostenlos holen</a></p>
+  <p><a class="cta" href="https://mamafunke.de/teilen/?s=ratgeber-sprueche-fuer-muetter">MamaFunke kostenlos holen</a></p>
 </div>
 
 <p class="hilfe">Wenn du dich über längere Zeit erschöpft, leer oder hoffnungslos fühlst, sprich mit deiner Hebamme, deiner Ärztin oder deinem Arzt. Die TelefonSeelsorge ist rund um die Uhr kostenlos und anonym erreichbar unter 0800 1110111 oder 116 123. In akuter Gefahr wähle den Notruf 112.</p>
@@ -280,12 +280,13 @@
 </footer>
 </div>
 <script>
-// Kommt jemand über einen Kanal-Link (z. B. ?k=pin), zählt der App-Knopf für diesen Kanal.
+// Kommt jemand über einen Kanal-Link (z. B. ?k=pin), zählt der App-Knopf für diesen Kanal
+// und nennt weiter diese Seite als Herkunft (?s=).
 (function () {
   var k = new URLSearchParams(location.search).get("k") || "";
   if (!/^(pin|ig|tt|fb|yt|wa)$/.test(k)) return;
   document.querySelectorAll("a.cta").forEach(function (a) {
-    if (a.getAttribute("href").indexOf("/teilen") > -1) a.setAttribute("href", "/" + k);
+    if (a.getAttribute("href").indexOf("/teilen") > -1) a.setAttribute("href", "/" + k + "/?s=ratgeber-sprueche-fuer-muetter");
   });
 })();
 </script>
