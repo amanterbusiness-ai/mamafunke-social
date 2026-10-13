@@ -121,3 +121,31 @@ def test_tiktok_api_erst_ab_stichtag():
 def test_tiktok_test_unbekannte_id(monkeypatch):
     monkeypatch.setenv("TIKTOK_TEST", "gibt-es-nicht")
     assert post.tiktok_test("gibt-es-nicht") == 1
+
+
+def test_fehlgeschlagener_post_wird_nicht_wiederholt(monkeypatch, tmp_path):
+    """Instagram meldete am 11. und 13.10.2026 einen Fehler, veröffentlichte aber trotzdem:
+    der halbstündliche Lauf hat dasselbe Karussell 42- und 26-mal gepostet."""
+    import json
+    plan = tmp_path / "posts.json"
+    stand = tmp_path / "posted.json"
+    plan.write_text(json.dumps([{"id": "x", "date": "2026-10-13", "time": "08:00", "kind": "slide",
+                                 "channels": ["instagram"], "caption": "c",
+                                 "media": {"instagram": ["a.jpg"], "tiktok": ["a.jpg"]}}]), encoding="utf-8")
+    aufrufe = []
+
+    def kaputt(p):
+        aufrufe.append(p["id"])
+        raise RuntimeError("Application request limit reached")
+
+    monkeypatch.setattr(post, "PLAN", plan)
+    monkeypatch.setattr(post, "STATE", stand)
+    monkeypatch.setattr(post, "apple_datum", lambda: None)
+    monkeypatch.setattr(post, "READY", {k: (lambda k=k: k == "instagram") for k in post.CHANNELS})
+    monkeypatch.setattr(post, "POSTERS", {**post.POSTERS, "instagram": kaputt})
+    monkeypatch.delenv("TIKTOK_TEST", raising=False)
+    for zeit in ("2026-10-13T08:13", "2026-10-13T08:43", "2026-10-13T09:13"):
+        monkeypatch.setattr(sys, "argv", ["post.py", "--now", zeit])
+        assert post.main() == (1 if zeit.endswith("08:13") else 0)
+    assert aufrufe == ["x"]
+    assert json.loads(stand.read_text(encoding="utf-8"))["x:instagram"]["status"] == "fehler"

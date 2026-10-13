@@ -398,6 +398,10 @@ def main() -> int:
                 print(f"gepostet  {key}  {result}")
             except Exception as error:  # ein Kanal darf die anderen nicht blockieren
                 failures += 1
+                # Nie von selbst wiederholen: Instagram meldete am 11. und 13.10.2026 einen Fehler und
+                # veröffentlichte trotzdem, der Lauf hat dasselbe Karussell dutzendfach gepostet.
+                # Zum Nachholen den Eintrag von Hand aus state/posted.json löschen.
+                state[key] = {"status": "fehler", "error": str(error)[:300], "at": now.isoformat()}
                 print(f"FEHLER    {key}: {error}", file=sys.stderr)
 
     if not args.dry_run:
