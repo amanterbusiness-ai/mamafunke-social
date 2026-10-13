@@ -1229,7 +1229,6 @@
     "kind": "slide",
     "channels": [
       "tiktok",
-      "instagram",
       "facebook"
     ],
     "impulse": "mf-mental-load-002",
@@ -1285,9 +1284,7 @@
     "time": "08:00",
     "kind": "slide",
     "channels": [
-      "tiktok",
-      "instagram",
-      "facebook"
+      "tiktok"
     ],
     "impulse": "mf-mental-load-012",
     "hook": "Was Mamas hören. Was Mamas denken.",
@@ -1344,9 +1341,7 @@
     "time": "08:00",
     "kind": "slide",
     "channels": [
-      "tiktok",
-      "instagram",
-      "facebook"
+      "tiktok"
     ],
     "impulse": "mf-mental-load-007",
     "hook": "Ich hab heute 3-mal aufgeräumt.",
@@ -1401,9 +1396,7 @@
     "time": "08:00",
     "kind": "slide",
     "channels": [
-      "tiktok",
-      "instagram",
-      "facebook"
+      "tiktok"
     ],
     "impulse": "mf-partnerschaft-017",
     "hook": "Schick das der Mama, die immer „Alles gut“ sagt.",
@@ -1482,7 +1475,7 @@
     "id": "szene-v08-kita-job",
     "date": "2026-10-21",
     "weekday": "Mittwoch",
-    "time": "20:15",
+    "time": "19:00",
     "kind": "reel",
     "channels": [
       "tiktok",
@@ -1504,35 +1497,10 @@
     }
   },
   {
-    "id": "video-09-grenzen",
-    "date": "2026-10-22",
-    "weekday": "Donnerstag",
-    "time": "20:15",
-    "kind": "reel",
-    "channels": [
-      "tiktok",
-      "instagram",
-      "facebook",
-      "youtube"
-    ],
-    "impulse": "mf-grenzen-011",
-    "hook": "21:30. Das Handy vibriert.",
-    "hook_type": "pov",
-    "ki": true,
-    "caption": "Wie viele „Kannst du kurz?“ hattest du heute? Schreib die Zahl in die Kommentare.\n\nElternchat, Nachbarin, Mama. Und du tippst schon: „Klar, mach ich!“ Stopp. Du darfst später antworten.\n\nSchreib uns, was dich heute belastet. Wir schicken dir deinen Satz.\nMamaFunke kostenlos laden, Link im Profil oder mamafunke.de\n\nDie Stimme ist KI-generiert.\n\n#grenzensetzen #mamaalltag #neinsagen #mentalload #mamaleben",
-    "captions": {
-      "youtube": "Wie viele „Kannst du kurz?“ hattest du heute?\n\nElternchat, Nachbarin, Mama. Und du tippst schon: „Klar, mach ich!“ Stopp. Du darfst später antworten.\n\nSchreib uns, was dich heute belastet. Wir schicken dir deinen Satz.\nKostenlos laden: mamafunke.de/yt\n\nDie Stimme ist KI-generiert."
-    },
-    "yt_titel": "21:30. Das Handy vibriert. Grenzen als Mama #shorts",
-    "media": {
-      "video": "media/videos/v09-grenzen.mp4"
-    }
-  },
-  {
     "id": "szene-v10-partner",
     "date": "2026-10-23",
     "weekday": "Freitag",
-    "time": "20:15",
+    "time": "19:00",
     "kind": "reel",
     "channels": [
       "tiktok",
@@ -1551,5 +1519,130 @@
     "media": {
       "video": "media/videos/v10-partner.mp4"
     }
+  },
+  {
+    "id": "szene-s19-termine-er-fragt",
+    "date": "2026-10-15",
+    "weekday": "Donnerstag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-partnerschaft-001",
+    "hook": "Du weißt jeden Termin. Er fragt dich.",
+    "hook_type": "pov",
+    "ki": true,
+    "caption": "Welche Frage hörst du am häufigsten? Videoszenen KI-generiert. #mamaalltag #mentalload #mamaleben #mamasein #momtok",
+    "media": {
+      "video": "media/szenen/reels/s19-termine-er-fragt.mp4"
+    },
+    "captions": {
+      "youtube": "Welche Frage hörst du am häufigsten? Videoszenen KI-generiert. #mamaalltag #mentalload #mamaleben #mamasein #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "Du weißt jeden Termin. Er fragt dich. #shorts"
+  },
+  {
+    "id": "szene-s21-papas-fuer-euch",
+    "date": "2026-10-17",
+    "weekday": "Samstag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-partnerschaft-006",
+    "hook": "Papas, das hier ist für euch.",
+    "hook_type": "papa",
+    "ki": true,
+    "caption": "Mamas: Schickt das eurem Mann. Ohne Kommentar. Videoszenen KI-generiert. #mentalload #papasein #mamaalltag #elternsein #momtok",
+    "media": {
+      "video": "media/szenen/reels/s21-papas-fuer-euch.mp4"
+    },
+    "captions": {
+      "youtube": "Mamas: Schickt das eurem Mann. Ohne Kommentar. Videoszenen KI-generiert. #mentalload #papasein #mamaalltag #elternsein #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "Papas, das hier ist für euch #shorts"
+  },
+  {
+    "id": "szene-s20-kalender-im-kopf",
+    "date": "2026-10-19",
+    "weekday": "Montag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-mental-load-020",
+    "hook": "Der Familienkalender hängt nicht an der Wand.",
+    "hook_type": "pov",
+    "ki": true,
+    "caption": "Was steht diese Woche nur in deinem Kopf? Videoszenen KI-generiert. #mamaalltag #mentalload #mamaleben #mamasein #momtok",
+    "media": {
+      "video": "media/szenen/reels/s20-kalender-im-kopf.mp4"
+    },
+    "captions": {
+      "youtube": "Was steht diese Woche nur in deinem Kopf? Videoszenen KI-generiert. #mamaalltag #mentalload #mamaleben #mamasein #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "Der Familienkalender hängt nicht an der Wand #shorts"
+  },
+  {
+    "id": "szene-s22-grenzen-2130",
+    "date": "2026-10-22",
+    "weekday": "Donnerstag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-grenzen-016",
+    "hook": "21:30 Uhr. Das Handy vibriert.",
+    "hook_type": "pov",
+    "ki": true,
+    "caption": "Wie viele „Kannst du kurz?“ hattest du heute? Videoszenen KI-generiert. #mamaalltag #grenzen #mamaleben #mamasein #momtok",
+    "media": {
+      "video": "media/szenen/reels/s22-grenzen-2130.mp4"
+    },
+    "captions": {
+      "youtube": "Wie viele „Kannst du kurz?“ hattest du heute? Videoszenen KI-generiert. #mamaalltag #grenzen #mamaleben #mamasein #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "21:30 Uhr. Das Handy vibriert. #shorts"
+  },
+  {
+    "id": "szene-s23-6uhr-kopf",
+    "date": "2026-10-24",
+    "weekday": "Samstag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-mental-load-005",
+    "hook": "6 Uhr im Kopf einer Mama.",
+    "hook_type": "gedanken",
+    "ki": true,
+    "caption": "Was ist dein erster Gedanke am Morgen? Videoszenen KI-generiert. #mamaalltag #mentalload #mamaleben #mamasein #momtok",
+    "media": {
+      "video": "media/szenen/reels/s23-6uhr-kopf.mp4"
+    },
+    "captions": {
+      "youtube": "Was ist dein erster Gedanke am Morgen? Videoszenen KI-generiert. #mamaalltag #mentalload #mamaleben #mamasein #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "6 Uhr im Kopf einer Mama #shorts"
   }
 ]
