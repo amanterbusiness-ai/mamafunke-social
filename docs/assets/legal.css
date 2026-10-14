@@ -1,0 +1,117 @@
+/* Rechtsseiten auf Englisch und Spanisch (mamafunke.de/en/, /es/).
+   Gleicher Stil wie die deutschen Rechtsseiten auf der App-Website
+   (styles.css dort, Abschnitt "Rechtsseiten"): Nachtblau, Gold, Serifen-
+   Überschriften, Systemschriften, keine externen Schriften. */
+:root {
+  --night: #071b48;
+  --night-deep: #051230;
+  --gold: #ffc538;
+  --gold-soft: rgba(255, 197, 56, 0.25);
+  --cream: #fff9f2;
+  --muted: #b7c0ce;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--night);
+  color: var(--cream);
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; }
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.legal header,
+.legal main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+.legal header { padding-bottom: 8px; }
+.legal main { padding-top: 16px; padding-bottom: 64px; }
+.legal h1 { font-size: 2.2rem; margin: 0; }
+.legal main h2 {
+  color: var(--cream);
+  font-size: 1.25rem;
+  margin: 2rem 0 0.7rem;
+}
+.legal main h3 {
+  color: var(--cream);
+  font-size: 1.05rem;
+  margin: 1.4rem 0 0.45rem;
+}
+.legal main p { color: var(--muted); margin: 0 0 0.9rem; }
+.legal main a { color: var(--gold); }
+.legal main ul,
+.legal main ol { color: var(--muted); padding-left: 1.25rem; margin: 0 0 1rem; }
+.legal main li { margin: 0.35rem 0; }
+.legal .stand { margin-top: 2rem; font-size: 0.9rem; }
+.legal .note {
+  border-left: 3px solid var(--gold);
+  padding-left: 12px;
+  font-size: 0.95rem;
+}
+
+.lang {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+.lang a { color: var(--cream); }
+.lang a[aria-current="page"] { color: var(--gold); font-weight: 700; }
+
+.footer {
+  background: var(--night-deep);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px 24px 32px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 720px;
+  margin: 0 auto 28px;
+}
+.footer-col { display: flex; flex-direction: column; gap: 10px; }
+.footer-col h4 {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+.footer-col a { color: var(--cream); font-size: 0.95rem; }
+.footer-col a:hover { color: var(--gold); text-decoration: none; }
+.copyright { text-align: center; color: var(--muted); font-size: 0.85rem; margin: 0; }
+
+@media (max-width: 600px) {
+  .legal header, .legal main { padding-left: 16px; padding-right: 16px; }
+  .legal h1 { font-size: 1.8rem; }
+  .footer { padding-left: 16px; padding-right: 16px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+}
