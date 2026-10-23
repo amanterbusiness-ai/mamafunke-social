@@ -578,6 +578,26 @@
     "id": "PJPzahc9rks",
     "status": "ok"
   },
+  "szene-v10-partner:facebook": {
+    "at": "2026-10-23T19:01:36.919143+02:00",
+    "id": "1463348722312480",
+    "status": "ok"
+  },
+  "szene-v10-partner:instagram": {
+    "at": "2026-10-23T19:01:36.919143+02:00",
+    "id": "18037847132846841",
+    "status": "ok"
+  },
+  "szene-v10-partner:story": {
+    "at": "2026-10-23T19:01:36.919143+02:00",
+    "id": "17906596506664027",
+    "status": "ok"
+  },
+  "szene-v10-partner:youtube": {
+    "at": "2026-10-23T19:01:36.919143+02:00",
+    "id": "MNPAf2sgoGQ",
+    "status": "ok"
+  },
   "video-01b-tabs:facebook": {
     "at": "2026-10-04T20:15:37.110024+02:00",
     "id": "3946868428795090",
