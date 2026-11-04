@@ -1644,5 +1644,80 @@
       "youtube": "Was ist dein erster Gedanke am Morgen? Videoszenen KI-generiert. #mamaalltag #mentalload #mamaleben #mamasein #momtok\nKostenlos laden: mamafunke.de/yt"
     },
     "yt_titel": "6 Uhr im Kopf einer Mama #shorts"
+  },
+  {
+    "id": "szene-s24-0312-wach",
+    "date": "2026-11-06",
+    "weekday": "Freitag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-erschoepfung-014",
+    "hook": "3:12 Uhr. Schon wieder das Kinderzimmer.",
+    "hook_type": "pov",
+    "ki": true,
+    "caption": "Wer steht nachts um drei auf? Die Alltagsszenen sind KI-generiert. Kostenlos laden, Link im Profil oder mamafunke.de #mamaalltag #schlafmangel #mamaleben #mamasein #momtok",
+    "media": {
+      "video": "media/szenen/reels/s24-0312-wach.mp4"
+    },
+    "captions": {
+      "youtube": "Wer steht nachts um drei auf? Die Alltagsszenen sind KI-generiert. Kostenlos laden, Link im Profil oder mamafunke.de #mamaalltag #schlafmangel #mamaleben #mamasein #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "3:12 Uhr. Schon wieder das Kinderzimmer. #shorts"
+  },
+  {
+    "id": "szene-s25-papas-nacht",
+    "date": "2026-11-08",
+    "weekday": "Sonntag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-babyzeit-012",
+    "hook": "Papas, sie hat die Nacht nicht geschlafen.",
+    "hook_type": "papa",
+    "ki": true,
+    "caption": "Papas, was war eure letzte Nacht? Schreibt es in die Kommentare. Die Alltagsszenen sind KI-generiert. Kostenlos laden, Link im Profil oder mamafunke.de #papas #babyzeit #mamaalltag #mamasein #momtok",
+    "media": {
+      "video": "media/szenen/reels/s25-papas-nacht.mp4"
+    },
+    "captions": {
+      "youtube": "Papas, was war eure letzte Nacht? Schreibt es in die Kommentare. Die Alltagsszenen sind KI-generiert. Kostenlos laden, Link im Profil oder mamafunke.de #papas #babyzeit #mamaalltag #mamasein #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "Papas, sie hat die Nacht nicht geschlafen. #shorts"
+  },
+  {
+    "id": "szene-s26-0930-konferenz",
+    "date": "2026-11-10",
+    "weekday": "Dienstag",
+    "time": "19:00",
+    "kind": "reel",
+    "channels": [
+      "tiktok",
+      "instagram",
+      "facebook",
+      "youtube"
+    ],
+    "impulse": "mf-beruf-015",
+    "hook": "09:30 Uhr. Konferenz in zehn Minuten.",
+    "hook_type": "pov",
+    "ki": true,
+    "caption": "Was steht bei dir um 9:30 Uhr auf der Liste? Schreib uns, was dich heute belastet. Wir schicken dir deinen Satz. Die Alltagsszenen sind KI-generiert. Kostenlos laden, Link im Profil oder mamafunke.de #mamaalltag #beruf #wiedereinstieg #mamaleben #momtok",
+    "media": {
+      "video": "media/szenen/reels/s26-0930-konferenz.mp4"
+    },
+    "captions": {
+      "youtube": "Was steht bei dir um 9:30 Uhr auf der Liste? Schreib uns, was dich heute belastet. Wir schicken dir deinen Satz. Die Alltagsszenen sind KI-generiert. Kostenlos laden, Link im Profil oder mamafunke.de #mamaalltag #beruf #wiedereinstieg #mamaleben #momtok\nKostenlos laden: mamafunke.de/yt"
+    },
+    "yt_titel": "09:30 Uhr. Konferenz in zehn Minuten. #shorts"
   }
 ]
